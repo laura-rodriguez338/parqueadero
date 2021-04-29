@@ -1,0 +1,27 @@
+{
+    "name": "desarrolloweb/estacionamiento",
+    "description": "proyecto en php",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "ext-json": "*",
+        "php-kit/ext-pdo": "*",
+        "mvccore/ext-debug-tracy-all": "*",
+        "league/commonmark-ext-inlines-only": "*",
+        "almasaeed2010/adminlte": "^3.0",
+        "vlucas/phpdotenv": "^3.6",
+        "nesbot/carbon": "^2.37",
+        "verot/class.upload.php": "^2.0",
+        "monolog/monolog": "^2.1",
+        "tgalopin/html-sanitizer": "^1.4",
+        "friendsofphp/php-cs-fixer": "^v2.16.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yovani Chaparro",
+            "email": "ychaparro12@misena.edu.co"
+        }
+    ],
+    "minimum-stability": "dev"
+}

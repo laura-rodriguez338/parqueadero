@@ -1,5 +1,5 @@
 {
-    "name": "desarrolloweb/estacionamiento",
+    "name": "parqueadero",
     "description": "proyecto en php",
     "type": "project",
     "require": {
@@ -19,9 +19,31 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Yovani Chaparro",
-            "email": "ychaparro12@misena.edu.co"
+            "name": "Laura Rodríguez",
+            "email": "lsrodriguez310@misena.edu.co",
+            "url": "https://github.com/laura-rodriguez338/parqueadero.git"
+        },
+        {
+            "name" : "Catalina Rodriguez",
+            "email" : "icrodriguez904@misena.edu.co",
+            "url" : "https://github.com/laura-rodriguez338/parqueadero.git"
+        },
+        {
+            "name" : "Jesus Olaya",
+            "email" : "jaolaya923@misena.edu.co",
+            "url" : "https://github.com/laura-rodriguez338/parqueadero.git"
+        },
+        {
+            "name" : "Juan Garcia",
+            "email" : "jfgarcia1869@misena.edu.co",
+            "url" : "https://github.com/laura-rodriguez338/parqueadero.git"
+        },
+        {
+            "name" : "Yovani Becerra",
+            "email" : "jfgarcia1869@misena.edu.co",
+            "url" : "https://github.com/laura-rodriguez338/parqueadero.git"
         }
+
     ],
     "minimum-stability": "dev"
 }

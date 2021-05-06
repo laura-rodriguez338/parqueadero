@@ -1,0 +1,64 @@
+{
+  "name": "parqueadero",
+  "version": "1.0.0",
+  "description": "proyecto en php",
+  "main": "index.js",
+  "scripts": {
+    "buildcss": "node-sass --output-style compressed -r resources/scss/ -o views/public/css/",
+    "buildjs": "uglifyjs-folder resources/js/ -eo views/public/js/",
+    "buildimg": "copyfiles -u 2 resources/img/. views/public/img/",
+    "build": "npm run buildcss & npm run buildjs & npm run buildimg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laura-rodriguez338/parqueadero.git"
+  },
+  "keywords": [
+    "parqueadero",
+    "ejemplo",
+    "mvc",
+    "php",
+    "inventarios"
+  ],
+  "author": "Laura Rodríguez",
+  "email": "lsrodriguez310@misena.edu.co",
+  "url": "https://github.com/laura-rodriguez338/parqueadero.git"
+  "contributors": [
+    {
+      "name" : "Catalina Rodriguez",
+      "email" : "icrodriguez904@misena.edu.co",
+      "url" : "https://github.com/laura-rodriguez338/parqueadero.git"
+    },
+    {
+      "name" : "Jesus Olaya",
+      "email" : "jaolaya923@misena.edu.co",
+      "url" : "https://github.com/laura-rodriguez338/parqueadero.git"
+    },
+    {
+      "name" : "Juan Garcia",
+      "email" : "jfgarcia1869@misena.edu.co",
+      "url" : "https://github.com/laura-rodriguez338/parqueadero.git"
+    },
+    {
+      "name" : "Yovani Becerra",
+      "email" : "jfgarcia1869@misena.edu.co",
+      "url" : "https://github.com/laura-rodriguez338/parqueadero.git"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EjemplosADSI/WebER/issues"
+  },
+  "homepage": "https://github.com/EjemplosADSI/WebER#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "bootstrap-imageupload": "^1.1.3",
+    "copyfiles": "^2.4.1",
+    "node-sass": "^4.14.1",
+    "popper.js": "^1.16.1",
+    "postcss": "^8.2.1",
+    "sass-lint": "*",
+    "uglify-js": "^3.12.2",
+    "uglifyjs-folder": "^2.0.0"
+  }
+}

@@ -23,6 +23,9 @@
   "author": "Laura Rodríguez",
   "email": "lsrodriguez310@misena.edu.co",
   "url": "https://github.com/laura-rodriguez338/parqueadero.git"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EjemplosADSI/WebER/issues",
   "contributors": [
     {
       "name" : "Catalina Rodriguez",
@@ -45,10 +48,7 @@
       "url" : "https://github.com/laura-rodriguez338/parqueadero.git"
     }
   ],
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/EjemplosADSI/WebER/issues"
-  },
+
   "homepage": "https://github.com/EjemplosADSI/WebER#readme",
   "devDependencies": {},
   "dependencies": {

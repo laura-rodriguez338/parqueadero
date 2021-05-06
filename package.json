@@ -22,34 +22,12 @@
   ],
   "author": "Laura Rodríguez",
   "email": "lsrodriguez310@misena.edu.co",
-  "url": "https://github.com/laura-rodriguez338/parqueadero.git"
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/EjemplosADSI/WebER/issues",
-  "contributors": [
-    {
-      "name" : "Catalina Rodriguez",
-      "email" : "icrodriguez904@misena.edu.co",
-      "url" : "https://github.com/laura-rodriguez338/parqueadero.git"
-    },
-    {
-      "name" : "Jesus Olaya",
-      "email" : "jaolaya923@misena.edu.co",
-      "url" : "https://github.com/laura-rodriguez338/parqueadero.git"
-    },
-    {
-      "name" : "Juan Garcia",
-      "email" : "jfgarcia1869@misena.edu.co",
-      "url" : "https://github.com/laura-rodriguez338/parqueadero.git"
-    },
-    {
-      "name" : "Yovani Becerra",
-      "email" : "jfgarcia1869@misena.edu.co",
-      "url" : "https://github.com/laura-rodriguez338/parqueadero.git"
-    }
-  ],
+    "url": "https://github.com/laura-rodriguez338/parqueadero"
+},
 
-  "homepage": "https://github.com/EjemplosADSI/WebER#readme",
+  "homepage": "https://github.com/laura-rodriguez338/parqueadero",
   "devDependencies": {},
   "dependencies": {
     "bootstrap-imageupload": "^1.1.3",

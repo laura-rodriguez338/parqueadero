@@ -3,8 +3,11 @@
 
 namespace App\Models;
 
-
+require ("AbstractDBConnection.php");
+require (__DIR__.'\..\interfaces\Model.php');
+require(__DIR__ .'/../../vendor/autoload.php');
 use App\Interfaces\Model;
+use App\Models\AbstractDBConnection;
 use Carbon\Carbon;
 
 class Insumos extends AbstractDBConnection implements Model
@@ -153,7 +156,8 @@ class Insumos extends AbstractDBConnection implements Model
 
     function deleted()
     {
-        // TODO: Implement deleted() method.
+        $this->setValor("Inactivo"); //Cambia el estado del Usuario
+        return $this->update();                    //Guarda los cambios..
     }
 
     static function search($query): ?array

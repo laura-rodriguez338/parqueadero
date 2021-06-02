@@ -1,2 +1,693 @@
 [2021-05-13T18:42:15.609861+00:00] General.INFO: Ejemplo {"datos":"acabe de entar a la pagina"} 
 [2021-05-13T18:42:17.053626+00:00] General.INFO: Ejemplo {"datos":"acabe de entar a la pagina"} 
+[2021-05-31T23:52:46.942187+00:00] General.ERROR: Exception  
+[2021-05-31T23:52:46.942957+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-05-31T23:52:46.943077+00:00] General.ERROR: Line: 128  
+[2021-05-31T23:52:46.943187+00:00] General.ERROR: Mensaje: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined  
+[2021-05-31T23:52:46.943306+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 128
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 127
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentacion,:valor,
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => 
+                            [:cantidad] => 
+                            [:presentasion] => 
+                            [:valor] => 0
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 141
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentacion,:valor,
+            
+        )
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\test\testinsumos.php
+            [line] => 16
+            [function] => insert
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-05-31T23:54:28.885442+00:00] General.ERROR: Exception  
+[2021-05-31T23:54:28.886058+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-05-31T23:54:28.886152+00:00] General.ERROR: Line: 128  
+[2021-05-31T23:54:28.886234+00:00] General.ERROR: Mensaje: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens  
+[2021-05-31T23:54:28.886328+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 128
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 127
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            null,:nombre,:cantidad,:presentacion,:valor,
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => 
+                            [:cantidad] => 
+                            [:presentasion] => 
+                            [:valor] => 0
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 141
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            null,:nombre,:cantidad,:presentacion,:valor,
+            
+        )
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\test\testinsumos.php
+            [line] => 16
+            [function] => insert
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-05-31T23:55:33.823844+00:00] General.ERROR: Exception  
+[2021-05-31T23:55:33.824757+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-05-31T23:55:33.824909+00:00] General.ERROR: Line: 128  
+[2021-05-31T23:55:33.825029+00:00] General.ERROR: Mensaje: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined  
+[2021-05-31T23:55:33.825163+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 128
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 127
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentacion,:valor,
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => 
+                            [:cantidad] => 
+                            [:presentasion] => 
+                            [:valor] => 0
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 141
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentacion,:valor,
+            
+        )
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\test\testinsumos.php
+            [line] => 16
+            [function] => insert
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-05-31T23:56:44.726392+00:00] General.ERROR: Exception  
+[2021-05-31T23:56:44.726981+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-05-31T23:56:44.727075+00:00] General.ERROR: Line: 128  
+[2021-05-31T23:56:44.727157+00:00] General.ERROR: Mensaje: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined  
+[2021-05-31T23:56:44.727249+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 128
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 127
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentacion,:valor,
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => detergente
+                            [:cantidad] => 10
+                            [:presentasion] => polvo
+                            [:valor] => 30000
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 141
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentacion,:valor,
+            
+        )
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\test\testinsumos.php
+            [line] => 16
+            [function] => insert
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-05-31T23:57:47.215096+00:00] General.ERROR: Exception  
+[2021-05-31T23:57:47.215708+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-05-31T23:57:47.215805+00:00] General.ERROR: Line: 128  
+[2021-05-31T23:57:47.215889+00:00] General.ERROR: Mensaje: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined  
+[2021-05-31T23:57:47.215984+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 128
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 127
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentacion,:valor
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => detergente
+                            [:cantidad] => 10
+                            [:presentasion] => polvo
+                            [:valor] => 30000
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 141
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentacion,:valor
+            
+        )
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\test\testinsumos.php
+            [line] => 16
+            [function] => insert
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-02T13:54:01.184058+00:00] General.ERROR: Exception  
+[2021-06-02T13:54:01.186307+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-02T13:54:01.186595+00:00] General.ERROR: Line: 44  
+[2021-06-02T13:54:01.186833+00:00] General.ERROR: Mensaje: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión  
+[2021-06-02T13:54:01.187097+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 44
+            [function] => __construct
+            [class] => PDO
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => mysql:host=127.0.0.1;port=3306;dbname=parqueadero;charset=utf8
+                    [1] => parqueadero
+                    [2] => parqueo65889
+                    [3] => Array
+                        (
+                            [1002] => SET NAMES utf8
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 144
+            [function] => Connect
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 159
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentacion,:valor,:empresa_id
+            
+        )
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\test\testinsumos.php
+            [line] => 18
+            [function] => insert
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-02T13:54:47.988231+00:00] General.ERROR: Exception  
+[2021-06-02T13:54:47.989714+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-02T13:54:47.989961+00:00] General.ERROR: Line: 128  
+[2021-06-02T13:54:47.990180+00:00] General.ERROR: Mensaje: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined  
+[2021-06-02T13:54:47.990422+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 128
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 145
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentacion,:valor,:empresa_id
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => detergente
+                            [:cantidad] => 10
+                            [:presentasion] => polvo
+                            [:valor] => 30000
+                            [:empresa_id] => 1
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 159
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentacion,:valor,:empresa_id
+            
+        )
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\test\testinsumos.php
+            [line] => 18
+            [function] => insert
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-02T13:56:20.911912+00:00] General.ERROR: Exception  
+[2021-06-02T13:56:20.913686+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-02T13:56:20.913957+00:00] General.ERROR: Line: 128  
+[2021-06-02T13:56:20.914162+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id' cannot be null  
+[2021-06-02T13:56:20.914534+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 128
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 145
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => detergente
+                            [:cantidad] => 10
+                            [:presentasion] => polvo
+                            [:valor] => 30000
+                            [:empresa_id] => 1
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 159
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\test\testinsumos.php
+            [line] => 18
+            [function] => insert
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-02T14:00:56.674613+00:00] General.ERROR: Exception  
+[2021-06-02T14:00:56.676025+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-02T14:00:56.676271+00:00] General.ERROR: Line: 128  
+[2021-06-02T14:00:56.676491+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`insumos`, CONSTRAINT `fk_insumos_empresa` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-02T14:00:56.676743+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 128
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 145
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => detergente
+                            [:cantidad] => 10
+                            [:presentasion] => polvo
+                            [:valor] => 30000
+                            [:empresa_id] => 1
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 159
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\test\testinsumos.php
+            [line] => 18
+            [function] => insert
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  

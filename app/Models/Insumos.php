@@ -17,14 +17,16 @@ class Insumos extends AbstractDBConnection implements Model
     private string $cantidad;
     private string $presentasion;
     private int $valor;
-    public function __construct(array $usuario = [])
+    private int $empresa_id;
+    public function __construct(array $insumos = [])
     {
         parent::__construct();
-        $this->setId($usuario['id'] ?? null);
-        $this->setNombre($usuario['nombre'] ?? '');
-        $this->setCantidad($usuario['cantidad'] ?? '');
-        $this->setPresentasion($usuario['presentasion'] ?? '');
-        $this->setValor($usuario['valor'] ?? 0);
+        $this->setId($insumos['id'] ?? null);
+        $this->setNombre($insumos['nombre'] ?? '');
+        $this->setCantidad($insumos['cantidad'] ?? '');
+        $this->setPresentasion($insumos['presentasion'] ?? '');
+        $this->setValor($insumos['valor'] ?? 0);
+        $this->setempresa_id($insumos['empresa_id'] ?? 1);
     }
     public function __destruct()
     {
@@ -111,11 +113,25 @@ class Insumos extends AbstractDBConnection implements Model
     {
         $this->valor = $valor;
     }
+    /**
+     * @return int
+     */
+    public function getempresa_id(): int
+    {
+        return $this->empresa_id;
+    }
+
+    /**
+     * @param int $empresa_id
+     */
+    public function setempresa_id(int $empresa_id): void
+    {
+        $this->empresa_id = $empresa_id;
+    }
 
 
     protected function save(string $query): ?bool
     {
-        $hashPassword = password_hash($this->password, self::HASH, ['cost' => self::COST]);
 
         $arrData = [
             ':id' =>    $this->getId(),
@@ -123,6 +139,7 @@ class Insumos extends AbstractDBConnection implements Model
             ':cantidad' =>   $this->getcantidad(),
             ':presentasion' =>  $this->getpresentasion(),
             ':valor' =>   $this->getvalor(),
+            ':empresa_id' =>   $this->getempresa_id(),
         ];
         $this->Connect();
         $result = $this->insertRow($query, $arrData);
@@ -136,7 +153,7 @@ class Insumos extends AbstractDBConnection implements Model
     public function insert(): ?bool
     {
         $query = "INSERT INTO insumos VALUES (
-            :id,:nombre,:cantidad,:presentacion,:valor,
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
             
         )";
         return $this->save($query);
@@ -149,14 +166,14 @@ class Insumos extends AbstractDBConnection implements Model
     {
         $query = "UPDATE insumos SET 
             nombre = :nombre, cantidad = :cantidad, presentasion = :presentasion, 
-            valor = :valor WHERE id = :id";
+            valor = :valor,empresa_id = :empresa_id WHERE id = :id";
         return $this->save($query);
     }
 
 
     function deleted()
     {
-        $this->setValor("Inactivo"); //Cambia el estado del Usuario
+        $this->setValor("Activo"); //Cambia el estado del Usuario
         return $this->update();                    //Guarda los cambios..
     }
 

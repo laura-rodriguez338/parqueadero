@@ -1,5 +1,5 @@
 <?php
-require_once("../../../app/Controllers/UsuariosController.php");
+require_once("../../../app/Controllers/insumosController.php");
 require_once("../../partials/routes.php");
 require_once("../../partials/check_login.php");
 
@@ -7,7 +7,7 @@ use App\Controllers\UsuariosController;
 use App\Models\GeneralFunctions;
 use App\Models\Usuarios;
 
-$nameModel = "Usuario";
+$nameModel = "insumos";
 $pluralModel = $nameModel.'s';
 $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
 ?>
@@ -90,59 +90,45 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                             <tr>
                                                 <th>#</th>
                                                 <th>Nombres</th>
-                                                <th>Apellidos</th>
-                                                <th>Tipo Doc.</th>
-                                                <th>Documento</th>
-                                                <th>Telefono</th>
-                                                <th>Direccion</th>
-                                                <th>Fecha Nacimiento</th>
-                                                <th>Rol</th>
-                                                <th>Foto</th>
-                                                <th>Estado</th>
-                                                <th>Acciones</th>
+                                                <th>cantidad</th>
+                                                <th>presentasion</th>
+                                                <th>valor</th>
+                                                <th>empresa_id</th>
+
+
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <?php
-                                            $arrUsuarios = UsuariosController::getAll();
-                                            /* @var $arrUsuarios Usuarios[] */
-                                            foreach ($arrUsuarios as $usuario) {
+                                            $arrinsumos = insumosController::getAll();
+                                            /* @var $arrinsumos insumos[] */
+                                            foreach ($arrinsumos as $insumos) {
                                                 ?>
                                                 <tr>
-                                                    <td><?= $usuario->getId(); ?></td>
-                                                    <td><?= $usuario->getNombres(); ?></td>
-                                                    <td><?= $usuario->getApellidos(); ?></td>
-                                                    <td><?= $usuario->getTipoDocumento(); ?></td>
-                                                    <td><?= $usuario->getDocumento(); ?></td>
-                                                    <td><?= $usuario->getTelefono(); ?></td>
-                                                    <td><?= $usuario->getDireccion(); ?>, <?= $usuario->getMunicipio()->getNombre(); ?></td>
-                                                    <td><?= $usuario->getFechaNacimiento()->translatedFormat('l, j \\de F Y'); ?></td>
-                                                    <td><?= $usuario->getRol(); ?></td>
-                                                    <td>
-                                                        <?php if(!empty($usuario->getFoto())){ ?>
-                                                            <span class="badge badge-info" data-toggle="tooltip" data-html="true"
-                                                                  title="<img class='img-thumbnail' src='../../public/uploadFiles/photos/<?= $usuario->getFoto(); ?>'>">Foto
-                                                        </span>
-                                                        <?php } ?>
-                                                    </td>
-                                                    <td><?= $usuario->getEstado(); ?></td>
-                                                    <td>
-                                                        <a href="edit.php?id=<?php echo $usuario->getId(); ?>"
+                                                    <td><?= $insumos->getId(); ?></td>
+                                                    <td><?= $insumos->getNombres(); ?></td>
+                                                    <td><?= $insumos->getcantidad(); ?></td>
+                                                    <td><?= $insumos->getpresentasion(); ?></td>
+                                                    <td><?= $insumos->getvalor(); ?></td>
+                                                    <td><?= $insumos->getempresa_id(); ?></td>
+
+
+                                                        <a href="edit.php?id=<?php echo $insumos->getId(); ?>"
                                                            type="button" data-toggle="tooltip" title="Actualizar"
                                                            class="btn docs-tooltip btn-primary btn-xs"><i
                                                                 class="fa fa-edit"></i></a>
-                                                        <a href="show.php?id=<?php echo $usuario->getId(); ?>"
+                                                        <a href="show.php?id=<?php echo $insumos->getId(); ?>"
                                                            type="button" data-toggle="tooltip" title="Ver"
                                                            class="btn docs-tooltip btn-warning btn-xs"><i
                                                                 class="fa fa-eye"></i></a>
-                                                        <?php if ($usuario->getEstado() != "Activo") { ?>
-                                                            <a href="../../../app/Controllers/MainController.php?controller=<?= $pluralModel ?>&action=activate&id=<?= $usuario->getId(); ?>"
+                                                        <?php if ($insumos->getEstado() != "Activo") { ?>
+                                                            <a href="../../../app/Controllers/MainController.php?controller=<?= $pluralModel ?>&action=activate&id=<?= $insumos->getId(); ?>"
                                                                type="button" data-toggle="tooltip" title="Activar"
                                                                class="btn docs-tooltip btn-success btn-xs"><i
                                                                     class="fa fa-check-square"></i></a>
                                                         <?php } else { ?>
                                                             <a type="button"
-                                                               href="../../../app/Controllers/MainController.php?controller=<?= $pluralModel ?>&action=inactivate&id=<?= $usuario->getId(); ?>"
+                                                               href="../../../app/Controllers/MainController.php?controller=<?= $pluralModel ?>&action=inactivate&id=<?= $insumos->getId(); ?>"
                                                                data-toggle="tooltip" title="Inactivar"
                                                                class="btn docs-tooltip btn-danger btn-xs"><i
                                                                     class="fa fa-times-circle"></i></a>
@@ -156,16 +142,11 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                             <tr>
                                                 <th>#</th>
                                                 <th>Nombres</th>
-                                                <th>Apellidos</th>
-                                                <th>Tipo Doc.</th>
-                                                <th>Documento</th>
-                                                <th>Telefono</th>
-                                                <th>Direccion</th>
-                                                <th>Fecha Nacimiento</th>
-                                                <th>Rol</th>
-                                                <th>Foto</th>
-                                                <th>Estado</th>
-                                                <th>Acciones</th>
+                                                <th>cantidad</th>
+                                                <th>presentasion</th>
+                                                <th>valor</th>
+                                                <th>empresa_id</th>
+
                                             </tr>
                                             </tfoot>
                                         </table>

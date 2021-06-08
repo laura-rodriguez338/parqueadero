@@ -152,10 +152,18 @@ class Insumos extends AbstractDBConnection implements Model
      */
     public function insert(): ?bool
     {
-        $query = "INSERT INTO insumos VALUES (
+        $query = "INSERT INTO Insumos VALUES (
             :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
             
         )";
+        if($this->save($query)){
+            $idInsumos = $this->getLastId("Insumos");
+            $this->setId($idInsumos);
+            return true;
+
+        }else{
+            return false;
+        }
         return $this->save($query);
     }
 
@@ -164,7 +172,7 @@ class Insumos extends AbstractDBConnection implements Model
      */
     public function update(): ?bool
     {
-        $query = "UPDATE insumos SET 
+        $query = "UPDATE Insumos SET 
             nombre = :nombre, cantidad = :cantidad, presentasion = :presentasion, 
             valor = :valor,empresa_id = :empresa_id WHERE id = :id";
         return $this->save($query);
@@ -173,27 +181,71 @@ class Insumos extends AbstractDBConnection implements Model
 
     function deleted()
     {
-        $this->setValor("Activo"); //Cambia el estado del Usuario
-        return $this->update();                    //Guarda los cambios..
+
     }
 
     static function search($query): ?array
     {
-        // TODO: Implement search() method.
+        try {
+            $arrInsumos = array();
+            $tmp = new Insumos();
+
+            $tmp->Connect();
+            $getrows = $tmp->getRows($query);
+            $tmp->Disconnect();
+
+            if (!empty($getrows)) {
+                foreach ($getrows as $valor) {
+                    $Insumos = new insumos($valor);
+                    array_push($arrInsumos, $Insumos);
+                    unset($Insumos); //Borrar el contenido del objeto
+                }
+                return $arrInsumos;
+            }
+            return null;
+        } catch (Exception $e) {
+            GeneralFunctions::logFile('Exception', $e);
+        }
+        return null;
     }
 
-    static function searchForId(int $id): ?object
+
+    static function searchForId(int $id): ?Insumos
     {
-        // TODO: Implement searchForId() method.
+        {
+            try {
+                if ($id > 0) {
+                    $tmpInsumos = new Insumos();
+                    $tmpInsumos->Connect();
+                    $getrow = $tmpInsumos->getRow("SELECT * FROM insumos WHERE id = ?", array($id) );
+
+                    $tmpInsumos->Disconnect();
+                    return ($getrow) ? new Insumos($getrow) : null;
+                } else {
+                    throw new Exception('Id de insumos Invalido');
+                }
+            } catch (Exception $e) {
+                GeneralFunctions::logFile('Exception', $e);
+            }
+            return null;
+        }
     }
 
     static function getAll(): ?array
     {
-        // TODO: Implement getAll() method.
+        return Insumos::search("SELECT * FROM insumos");
     }
 
     public function jsonSerialize()
     {
-        // TODO: Implement jsonSerialize() method.
+        return [
+            'id' => $this->getId(),
+            'nombre' => $this->getNombre(),
+            'cantidad' => $this->getcantidad(),
+            'presentasion' => $this->getpresentasion(),
+            'valor' => $this->getvalor(),
+            'empresa_id' => $this->getempresa_id(),
+        ];
+
     }
 }

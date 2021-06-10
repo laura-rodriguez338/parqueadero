@@ -15,7 +15,7 @@ $arrUser = [
 
 $arrUser2 = [
 
-    'nombre' => 'javonliquido',
+    'nombre' => 'jabonliquido',
     'cantidad' => 15,
     'presentasion' => 'liquido',
     'valor' => 40000,
@@ -28,7 +28,7 @@ $objUser = new Insumos($arrUser);
 $objUser->insert();
 
 
-$objUser->setnombre("javon");
+$objUser->setnombre("jabon");
 $objUser->setcantidad(20);
 //$objUser->update();
 
@@ -47,9 +47,9 @@ if(!empty($arrResult)){
 }
 
 $objUserjabonliquido = Insumos::searchForId(3);
-if(!empty($objUserjavonliquido)){
-    $objUserjavonliquido->setcantidad(20);
-    $objUserjavonliquido->update();
+if(!empty($objUserjabonliquido)){
+    $objUserjabonliquido->setcantidad(20);
+    $objUserjabonliquido->update();
 }
 
 $arrUsers = Insumos::getAll();

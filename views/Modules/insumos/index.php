@@ -1,13 +1,12 @@
 <?php
-require_once("../../../app/Controllers/insumosController.php");
+require_once("../../../app/Controllers/InsumosControllers.php");
 require_once("../../partials/routes.php");
-require_once("../../partials/check_login.php");
+//require_once("../../partials/check_login.php");
 
-use App\Controllers\UsuariosController;
+use App\controllers\InsumosControllers;
 use App\Models\GeneralFunctions;
-use App\Models\Usuarios;
 
-$nameModel = "insumos";
+$nameModel = "Insumos";
 $pluralModel = $nameModel.'s';
 $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
 ?>
@@ -94,25 +93,26 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                                 <th>presentasion</th>
                                                 <th>valor</th>
                                                 <th>empresa_id</th>
+                                                <th>Acciones</th>
 
 
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <?php
-                                            $arrinsumos = insumosController::getAll();
+                                            $arrinsumos = InsumosControllers::getAll();
                                             /* @var $arrinsumos insumos[] */
                                             foreach ($arrinsumos as $insumos) {
                                                 ?>
                                                 <tr>
                                                     <td><?= $insumos->getId(); ?></td>
-                                                    <td><?= $insumos->getNombres(); ?></td>
+                                                    <td><?= $insumos->getNombre(); ?></td>
                                                     <td><?= $insumos->getcantidad(); ?></td>
                                                     <td><?= $insumos->getpresentasion(); ?></td>
                                                     <td><?= $insumos->getvalor(); ?></td>
                                                     <td><?= $insumos->getempresa_id(); ?></td>
 
-
+                                                    <td>
                                                         <a href="edit.php?id=<?php echo $insumos->getId(); ?>"
                                                            type="button" data-toggle="tooltip" title="Actualizar"
                                                            class="btn docs-tooltip btn-primary btn-xs"><i
@@ -121,18 +121,6 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                                            type="button" data-toggle="tooltip" title="Ver"
                                                            class="btn docs-tooltip btn-warning btn-xs"><i
                                                                 class="fa fa-eye"></i></a>
-                                                        <?php if ($insumos->getEstado() != "Activo") { ?>
-                                                            <a href="../../../app/Controllers/MainController.php?controller=<?= $pluralModel ?>&action=activate&id=<?= $insumos->getId(); ?>"
-                                                               type="button" data-toggle="tooltip" title="Activar"
-                                                               class="btn docs-tooltip btn-success btn-xs"><i
-                                                                    class="fa fa-check-square"></i></a>
-                                                        <?php } else { ?>
-                                                            <a type="button"
-                                                               href="../../../app/Controllers/MainController.php?controller=<?= $pluralModel ?>&action=inactivate&id=<?= $insumos->getId(); ?>"
-                                                               data-toggle="tooltip" title="Inactivar"
-                                                               class="btn docs-tooltip btn-danger btn-xs"><i
-                                                                    class="fa fa-times-circle"></i></a>
-                                                        <?php } ?>
                                                     </td>
                                                 </tr>
                                             <?php } ?>
@@ -146,6 +134,7 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                                 <th>presentasion</th>
                                                 <th>valor</th>
                                                 <th>empresa_id</th>
+                                                <th>Acciones</th>
 
                                             </tr>
                                             </tfoot>

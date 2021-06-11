@@ -31,7 +31,7 @@ if(!empty($arrResult)){
     }
 }
 
-$objUsersogamoso = Municipios::searchForId(3);
+$objUsersogamoso = Municipios::searchForId(1);
 if(!empty($objUsersogamoso)){
     $objUsersogamoso->setNombre($objUsersogamoso);
     $objUsersogamoso->update();
@@ -45,5 +45,5 @@ if(!empty($arrUsers)){
     }
 }
 
-$objUsersogamoso = Municipios::searchForId(5);
+$objUsersogamoso = Municipios::searchForId(1);
 echo json_encode($objUsersogamoso);

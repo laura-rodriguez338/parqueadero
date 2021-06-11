@@ -23,7 +23,7 @@ $objUser->setnombre("sogamoso");
 
 
 
-$arrResult = Municipios::search("SELECT * FROM Municipios WHERE id ");
+$arrResult = Municipios::search("SELECT * FROM Insumos WHERE id ");
 if(!empty($arrResult)){
     /* @var $arrResult Municipios[] */
     foreach ($arrResult as $Municipios){
@@ -33,16 +33,17 @@ if(!empty($arrResult)){
 
 $objUsersogamoso = Municipios::searchForId(3);
 if(!empty($objUsersogamoso)){
+    $objUsersogamoso->setNombre($objUsersogamoso);
     $objUsersogamoso->update();
 }
 
 $arrUsers = Municipios::getAll();
 if(!empty($arrUsers)){
     /* @var $arrUsers Municipios[] */
-    foreach ($arrUsers as $Municipios){
-        echo "id: ".$Municipios->getId().", Nombre: ".$Municipios->getNombre ()."\n";
+    foreach ($arrUsers as $municipios){
+        echo "id: ".$municipios->getId().", Nombre: ".$municipios->getNombre()."\n";
     }
 }
 
-$objUsertunja = Municipios::searchForId(5);
-echo json_encode($objUsertunja);
+$objUsersogamoso = Municipios::searchForId(5);
+echo json_encode($objUsersogamoso);

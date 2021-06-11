@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\controllers;
 
 use App\Models\GeneralFunctions;

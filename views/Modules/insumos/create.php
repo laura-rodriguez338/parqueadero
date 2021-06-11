@@ -70,8 +70,8 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                             <div class="card-body">
                                 <!-- form start -->
                                 <form class="form-horizontal" enctype="multipart/form-data" method="post" id="frmCreate<?= $nameModel ?>"
-                                      name="frmCreate<?= $nameModel ?>"  action="#">
-<!--                                      action="../../../app/Controllers/MainController.php?controller=--><?= ""//= $pluralModel ?><!--&action=create">-->
+                                      name="frmCreate<?= $nameModel ?>"
+                                      action="../../../app/Controllers/MainController.php?controller=<?=  $pluralModel ?>&action=create">
 
                                     <div class="row">
                                         <div class="col-sm-12">
@@ -92,11 +92,11 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="presentacion" class="col-sm-2 col-form-label">Presentacion</label>
+                                                <label for="presentasion" class="col-sm-2 col-form-label">Presentasion</label>
                                                 <div class="col-sm-10">
-                                                    <input required type="number" minlength="6" class="form-control"
-                                                           id="presentacion" name="presentacion" placeholder="Tipo de presentacion"
-                                                           value="<?= $frmSession['presentacion'] ?? '' ?>">
+                                                    <input required type="text"  class="form-control"
+                                                           id="presentasion" name="presentasion" placeholder="Tipo de presentasion"
+                                                           value="<?= $frmSession['presentasion'] ?? '' ?>">
                                                 </div>
 
                                             </div>
@@ -107,10 +107,16 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                                            name="valor" placeholder="Ingrese el valor"
                                                            value="<?= $frmSession['valor'] ?? '' ?>">
                                                 </div>
-
-
-                                    </div>
-
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="empresa_id" class="col-sm-2 col-form-label">empresa_id</label>
+                                                <div class="col-sm-10">
+                                                    <input required type="text" class="form-control" id="empresa_id"
+                                                           name="empresa_id" placeholder="Ingrese la empresa_id"
+                                                           value="<?= $frmSession['empresa_id'] ?? '' ?>">
+                                                </div>
+                                            </div>
+                                        </div>
                                     <hr>
                                     <button type="submit" class="btn btn-info">Enviar</button>
                                     <a href="../../../../parqueadero.git/views/Modules/insumos/index.php" role="button" class="btn btn-default float-right">Cancelar</a>

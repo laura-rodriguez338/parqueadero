@@ -146,7 +146,6 @@ class Insumos extends AbstractDBConnection implements Model
         $this->Disconnect();
         return $result;
     }
-
     /**
      * @return bool|null
      */

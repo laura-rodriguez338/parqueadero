@@ -907,3 +907,4 @@
 
 )
   
+[2021-06-11T14:25:09.725805+00:00] General.ERROR: Clase no encontrada {"descripcion":"La clase App\\Controllers\\InsumosController no fue encontrada "} 

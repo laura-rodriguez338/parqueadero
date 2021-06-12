@@ -908,3 +908,315 @@
 )
   
 [2021-06-11T14:25:09.725805+00:00] General.ERROR: Clase no encontrada {"descripcion":"La clase App\\Controllers\\InsumosController no fue encontrada "} 
+[2021-06-12T00:26:35.705781+00:00] General.ERROR: Exception  
+[2021-06-12T00:26:35.707651+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php  
+[2021-06-12T00:26:35.707985+00:00] General.ERROR: Line: 128  
+[2021-06-12T00:26:35.708184+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`insumos`, CONSTRAINT `fk_insumos_empresa` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-12T00:26:35.708386+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php
+            [line] => 128
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 145
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => detergente
+                            [:cantidad] => 10
+                            [:presentasion] => polvo
+                            [:valor] => 30000
+                            [:empresa_id] => 1
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 158
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\test\testinsumos.php
+            [line] => 28
+            [function] => insert
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-12T00:26:35.717107+00:00] General.ERROR: Exception  
+[2021-06-12T00:26:35.717676+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php  
+[2021-06-12T00:26:35.717845+00:00] General.ERROR: Line: 128  
+[2021-06-12T00:26:35.717987+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`insumos`, CONSTRAINT `fk_insumos_empresa` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-12T00:26:35.718144+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php
+            [line] => 128
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 145
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => jabonliquido
+                            [:cantidad] => 15
+                            [:presentasion] => liquido
+                            [:valor] => 40000
+                            [:empresa_id] => 1
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 158
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\test\testinsumos.php
+            [line] => 39
+            [function] => insert
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-12T00:30:27.355880+00:00] General.ERROR: Exception  
+[2021-06-12T00:30:27.356608+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php  
+[2021-06-12T00:30:27.356723+00:00] General.ERROR: Line: 128  
+[2021-06-12T00:30:27.356827+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`insumos`, CONSTRAINT `fk_insumos_empresa` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-12T00:30:27.356944+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php
+            [line] => 128
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 145
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => detergente
+                            [:cantidad] => 10
+                            [:presentasion] => polvo
+                            [:valor] => 30000
+                            [:empresa_id] => 1
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 158
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\test\testinsumos.php
+            [line] => 28
+            [function] => insert
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-12T00:30:27.363963+00:00] General.ERROR: Exception  
+[2021-06-12T00:30:27.364488+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php  
+[2021-06-12T00:30:27.364619+00:00] General.ERROR: Line: 128  
+[2021-06-12T00:30:27.364739+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`insumos`, CONSTRAINT `fk_insumos_empresa` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-12T00:30:27.364871+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php
+            [line] => 128
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 145
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => jabonliquido
+                            [:cantidad] => 15
+                            [:presentasion] => liquido
+                            [:valor] => 40000
+                            [:empresa_id] => 1
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 158
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\test\testinsumos.php
+            [line] => 39
+            [function] => insert
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  

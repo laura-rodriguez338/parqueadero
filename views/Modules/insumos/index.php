@@ -102,6 +102,7 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                             <?php
                                             $arrinsumos = InsumosControllers::getAll();
                                             /* @var $arrinsumos insumos[] */
+                                            if(!empty($arrinsumos)){
                                             foreach ($arrinsumos as $insumos) {
                                                 ?>
                                                 <tr>
@@ -123,7 +124,7 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                                                 class="fa fa-eye"></i></a>
                                                     </td>
                                                 </tr>
-                                            <?php } ?>
+                                            <?php } } ?>
 
                                             </tbody>
                                             <tfoot>

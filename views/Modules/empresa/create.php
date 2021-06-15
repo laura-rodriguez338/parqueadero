@@ -6,7 +6,7 @@ use App\Models\GeneralFunctions;
 use Carbon\Carbon;
 
 
-$nameModel = "Insumo";
+$nameModel = "Empresa";
 $pluralModel = $nameModel.'s';
 $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
 ?>
@@ -26,23 +26,24 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
 
 
     <!-- Content Wrapper. Contains page content -->
-
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>Crear un Nuevo <?= $nameModel ?></h1>
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Crear un Nuevo <?= $nameModel ?></h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="<?= $baseURL; ?>/views"><?= $_ENV['ALIASE_SITE'] ?></a></li>
+                            <li class="breadcrumb-item"><a href="../../../../parqueadero/views/Modules/empresa/index.php"><?= $pluralModel ?></a></li>
+                            <li class="breadcrumb-item active">Crear</li>
+                        </ol>
+                    </div>
                 </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="<?= $baseURL; ?>/views"><?= $_ENV['ALIASE_SITE'] ?></a></li>
-                        <li class="breadcrumb-item"><a href="../../../../parqueadero.git/views/Modules/Insumos/index.php"><?= $pluralModel ?></a></li>
-                        <li class="breadcrumb-item active">Crear</li>
-                    </ol>
-                </div>
-            </div>
-        </div><!-- /.container-fluid -->
+            </div><!-- /.container-fluid -->
+        </section>
 
         <!-- Main content -->
         <section class="content">
@@ -78,48 +79,39 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                                 <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
                                                 <div class="col-sm-10">
                                                     <input required type="text" class="form-control" id="nombre" name="nombre"
-                                                           placeholder="Ingrese el nombre" value="<?= $frmSession['nombres'] ?? '' ?>">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="cantidad" class="col-sm-2 col-form-label">Cantidad</label>
-                                                <div class="col-sm-10">
-                                                    <input required type="text" class="form-control" id="cantidad"
-                                                           name="cantidad" placeholder="Ingrese la cantidad"
-                                                           value="<?= $frmSession['cantidad'] ?? '' ?>">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row">
-                                                <label for="presentasion" class="col-sm-2 col-form-label">Presentasion</label>
-                                                <div class="col-sm-10">
-                                                    <input required type="text"  class="form-control"
-                                                           id="presentasion" name="presentasion" placeholder="Tipo de presentasion"
-                                                           value="<?= $frmSession['presentasion'] ?? '' ?>">
+                                                           placeholder="Ingrese el nombre" value="<?= $frmSession['nombre'] ?? '' ?>">
                                                 </div>
 
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="valor" class="col-sm-2 col-form-label">Valor</label>
-                                                <div class="col-sm-10">
-                                                    <input required type="text" class="form-control" id="valor"
-                                                           name="valor" placeholder="Ingrese el valor"
-                                                           value="<?= $frmSession['valor'] ?? '' ?>">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="empresa_id" class="col-sm-2 col-form-label">empresa_id</label>
-                                                <div class="col-sm-10">
-                                                    <input required type="text" class="form-control" id="empresa_id"
-                                                           name="empresa_id" placeholder="Ingrese la empresa_id"
-                                                           value="<?= $frmSession['empresa_id'] ?? '' ?>">
-                                                </div>
                                             </div>
                                         </div>
-                                    <hr>
-                                    <button type="submit" class="btn btn-info">Enviar</button>
-                                    <a href="../../../../parqueadero.git/views/Modules/insumos/index.php" role="button" class="btn btn-default float-right">Cancelar</a>
-                                    <!-- /.card-footer -->
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group row">
+                                                    <label for="Telefono" class="col-sm-2 col-form-label">Telefono</label>
+                                                    <div class="col-sm-10">
+                                                        <input required type="text" class="form-control" id="Telefono" name="Telefono"
+                                                               placeholder="Ingrese su telefono" value="<?= $frmSession['telefono'] ?? '' ?>">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group row">
+                                                        <label for="Direccion" class="col-sm-2 col-form-label">Direccion</label>
+                                                        <div class="col-sm-10">
+                                                            <input required type="text" class="form-control" id="Direccion" name="Direccion"
+                                                                   placeholder="Ingrese su Direccion" value="<?= $frmSession['direccion'] ?? '' ?>">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                        <hr>
+                                        <button type="submit" class="btn btn-info">Enviar</button>
+                                        <a href="../../../../parqueadero/views/Modules/empresa/index.php" role="button" class="btn btn-default float-right">Cancelar</a>
+                                        <!-- /.card-footer -->
                                 </form>
                             </div>
                             <!-- /.card-body -->

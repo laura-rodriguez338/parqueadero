@@ -90,9 +90,7 @@ $pluralModel = $nameModel . 's';
                                                 <hr>
                                                 <strong><i class="fas fa-user mr-1"></i> Presentasion</strong>
                                                 <p class="text-muted"><?= $DataInsumos->getPresentasion() . ": " . $DataInsumos->getPresentasion() ?></p>
-                                                <hr>
-                                                <strong><i class="fas fa-map-marker-alt mr-1"></i> presentasion</strong>
-                                                <p class="text-muted"><?= $DataInsumos->getPresentasion() ?>
+
                                                  <hr>
                                                     <strong><i class="fas fa-user mr-1"></i> Valor</strong>
                                                 <p class="text-muted"><?= $DataInsumos->getValor() . ": " . $DataInsumos->getValor() ?></p>
@@ -112,7 +110,7 @@ $pluralModel = $nameModel . 's';
                                     <div class="card-footer">
                                         <div class="row">
                                             <div class="col-auto mr-auto">
-                                                <a role="button" href="../../../../parqueadero.git/views/Modules/insumos/index.php" class="btn btn-success float-right"
+                                                <a role="button" href="../../../../parqueadero/views/Modules/insumos/index.php" class="btn btn-success float-right"
                                                    style="margin-right: 5px;">
                                                     <i class="fas fa-tasks"></i> Gestionar <?= $pluralModel ?>
                                                 </a>

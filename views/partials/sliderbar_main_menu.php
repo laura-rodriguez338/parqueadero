@@ -58,6 +58,32 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item has-treeview <?= strpos($_SERVER['REQUEST_URI'],'empresa') ? 'menu-open' : '' ?>">
+                    <a href="#" class="nav-link <?= strpos($_SERVER['REQUEST_URI'],'empresa') ? 'active' : '' ?>">
+                        <i class=" fas fa-building"></i>
+                        <p>
+                            Empresas
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="<?= $baseURL ?>/views/modules/empresa/index.php" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Gestionar</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= $baseURL ?>/views/modules/empresa/create.php" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Registrar</p>
+                            </a>
+
+                        </li>
+
+                        </li>
+                    </ul>
+                </li>
                 <li class="nav-item has-treeview <?= strpos($_SERVER['REQUEST_URI'],'insumos') ? 'menu-open' : '' ?>">
                     <a href="#" class="nav-link <?= strpos($_SERVER['REQUEST_URI'],'insumos') ? 'active' : '' ?>">
                         <i class=" fas fa-archive"></i>

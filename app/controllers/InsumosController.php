@@ -8,7 +8,7 @@ use App\Models\Insumos;
 use Carbon\Carbon;
 use Carbon\Traits\Creator;
 
-class InsumosControllers
+class InsumosController
 {
     private array $dataInsumos; //Almacenaran Datos que vengan de la interfaz
 

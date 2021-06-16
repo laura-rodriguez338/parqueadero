@@ -1,10 +1,9 @@
 <?php
 require("../../partials/routes.php");
-require_once("../../partials/check_login.php");
-require("../../../app/Controllers/EmpresaControllers.php");
+//require_once("../../partials/check_login.php");
+require("../../../app/Controllers/EmpresasController.php");
 
-
-use App\Controllers\EmpresaControllers;
+use App\Controllers\EmpresasController;
 use App\Models\GeneralFunctions;
 use App\Models\Empresa;
 use Carbon\Carbon;
@@ -75,8 +74,8 @@ $pluralModel = $nameModel.'s';
                                 <p>
                                 <?php
 
-                                $DataMunicipios = EmpresaControllers::searchForID(["id" => $_GET["id"]]);
-                                /* @var $DataMunicipios Empresa*/
+                                $DataEmpresa = EmpresasController::searchForID(["id" => $_GET["id"]]);
+                                /* @var $DataEmpresa Empresa*/
                                 if (!empty($DataEmpresa)) {
                                     ?>
                                     <!-- form start -->
@@ -96,6 +95,7 @@ $pluralModel = $nameModel.'s';
                                                                    placeholder="Ingrese sus nombre">
                                                         </div>
                                                     </div>
+                                                </div>
                                                     <div class="col-sm-10">
                                                         <div class="form-group row">
                                                             <label for="Telefono" class="col-sm-2 col-form-label">Telefono</label>
@@ -105,6 +105,7 @@ $pluralModel = $nameModel.'s';
                                                                        placeholder="Ingrese su Telefono">
                                                             </div>
                                                         </div>
+                                                    </div>
                                                         <div class="col-sm-10">
                                                             <div class="form-group row">
                                                                 <label for="Direccion" class="col-sm-2 col-form-label">Direccion</label>
@@ -112,45 +113,6 @@ $pluralModel = $nameModel.'s';
                                                                     <input required type="text" class="form-control" id="Direccion"
                                                                            name="Direccion" value="<?= $DataEmpresa->getDireccion(); ?>"
                                                                            placeholder="Ingrese su Direccion">
-                                                                </div>
-                                                            </div>
-                                                        <?php if ($_SESSION['UserInSession']['rol'] == 'Administrador'){ ?>
-                                                            <div class="form-group row">
-                                                                <label for="user" class="col-sm-2 col-form-label">Empresa</label>
-                                                                <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" id="user" name="user" value="<?= $DataEmpresa->getUser(); ?>" placeholder="Ingrese su empresa">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="form-group row">
-                                                                <label for="password" class="col-sm-2 col-form-label">Password</label>
-                                                                <div class="col-sm-10">
-                                                                    <input type="password" class="form-control" id="password" name="password" value="" placeholder="Ingrese su Password">
-                                                                </div>
-                                                            </div>
-
-                                                        <?php } ?>
-                                                    </div>
-                                                    <div class="col-sm-2">
-                                                        <div class="info-box">
-                                                            <div class="imageupload panel panel-primary">
-                                                                <div class="panel-heading clearfix">
-                                                                    <h5 class="panel-title pull-left">Foto de Perfil</h5>
-                                                                </div>
-                                                                <div class="file-tab panel-body">
-                                                                    <label class="btn btn-default btn-file">
-                                                                        <span>Seleccionar</span>
-                                                                        <!-- The file is stored here. -->
-                                                                        <input value="<?= $DataEmpresa->getFoto(); ?>" type="file" id="foto" name="foto">
-                                                                    </label>
-                                                                    <button type="button" class="btn btn-default">Eliminar</button>
-                                                                </div>
-                                                                <div class="panel-footer">
-                                                                    <?php if(!empty($DataEmpresa->getFoto())){?>
-                                                                        <img id="thumbFoto" src="../../public/uploadFiles/photos/<?= $DataEmpresa->getFoto(); ?>"
-                                                                             alt="Sin Foto de Perfil" class="thumbnail" style="max-width: 250px; max-height: 250px">
-                                                                    <?php } ?>
-                                                                    <input type="hidden" name="nameFoto" id="nameFoto" value="<?= $DataEmpresa->getFoto() ?? '' ?>">
                                                                 </div>
                                                             </div>
                                                         </div>

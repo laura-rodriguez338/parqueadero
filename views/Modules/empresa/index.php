@@ -1,9 +1,9 @@
 <?php
-require_once("../../../app/Controllers/EmpresaControllers.php");
+require_once("../../../app/Controllers/EmpresasController.php");
 require_once("../../partials/routes.php");
 //require_once("../../partials/check_login.php");
 
-use App\controllers\EmpresaControllers;
+use App\controllers\EmpresasController;
 use App\Models\GeneralFunctions;
 
 $nameModel = "Empresa";
@@ -98,7 +98,7 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                             </thead>
                                             <tbody>
                                             <?php
-                                            $arrempresa = EmpresaControllers::getAll();
+                                            $arrempresa = EmpresasController::getAll();
                                             /* @var $arrempresa empresa[] */
                                             if(!empty($arrempresa)){
                                             foreach ($arrempresa as $empresa) {

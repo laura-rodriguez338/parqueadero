@@ -1,9 +1,9 @@
 <?php
-require_once("../../../app/Controllers/InsumosControllers.php");
+require_once("../../../app/Controllers/InsumosController.php");
 require_once("../../partials/routes.php");
 //require_once("../../partials/check_login.php");
 
-use App\controllers\InsumosControllers;
+use App\controllers\InsumosController;
 use App\Models\GeneralFunctions;
 
 $nameModel = "Insumos";
@@ -100,7 +100,7 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                             </thead>
                                             <tbody>
                                             <?php
-                                            $arrinsumos = InsumosControllers::getAll();
+                                            $arrinsumos = InsumosController::getAll();
                                             /* @var $arrinsumos insumos[] */
                                             if(!empty($arrinsumos)){
                                             foreach ($arrinsumos as $insumos) {

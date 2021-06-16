@@ -10,8 +10,8 @@ use App\Models\GeneralFunctions;
 
 if (!empty($_GET['controller'])){
 
-    //unset( $_SESSION['frm'.ucfirst($_GET['controller'])] );
-    //$_SESSION['frm'.ucfirst($_GET['controller'])] = $_POST; //Guarda Valores en la sesion por si hay erroes en el formulario
+    unset( $_SESSION['frm'.ucfirst($_GET['controller'])] );
+    $_SESSION['frm'.ucfirst($_GET['controller'])] = $_POST; //Guarda Valores en la sesion por si hay erroes en el formulario
 
     $nameController = 'App\Controllers\\'.(ucfirst($_GET['controller'])."Controller");
     if(class_exists($nameController)){

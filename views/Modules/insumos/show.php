@@ -3,7 +3,7 @@ require("../../partials/routes.php");
 require_once("../../partials/check_login.php");
 require("../../../app/Controllers/InsumosController.php");
 
-use App\Controllers\InsumosControllers;
+use App\Controllers\InsumosController;
 use App\Models\GeneralFunctions;
 use App\Models\Insumos;
 
@@ -57,7 +57,7 @@ $pluralModel = $nameModel . 's';
                         <!-- Horizontal Form -->
                         <div class="card card-green">
                             <?php if (!empty($_GET["id"]) && isset($_GET["id"])) {
-                                $DataInsumos = InsumosControllers::searchForID(["id" => $_GET["id"]]);
+                                $DataInsumos = InsumosController::searchForID(["id" => $_GET["id"]]);
                                 /* @var $DataInsumos Insumos */
                                 if (!empty($DataInsumos)) {
                                     ?>

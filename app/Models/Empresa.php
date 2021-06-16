@@ -9,20 +9,39 @@ require(__DIR__ .'/../../vendor/autoload.php');
 use App\Interfaces\Model;
 use App\Models\AbstractDBConnection;
 use Carbon\Carbon;
-class Empresa
+
+class Empresa extends AbstractDBConnection implements Model
 {
     private ?int $id;
     private string $nombre;
-    private string $telefono;
+    private int $telefono;
     private string $direccion;
-    public function __construct(array $Empresa = [])
+    private int $municipios_id; //Id numero
+
+    /* Relacion */
+    private Municipios $municipio; //Todos los datos del municipio
+
+    public function __construct(array $empresa = [])
     {
         parent::__construct();
         $this->setId($empresa['id'] ?? null);
         $this->setNombre($empresa['nombre'] ?? '');
-        $this->settelefono($empresa['telefono'] ?? '');
+        $this->settelefono($empresa['telefono'] ?? 0);
         $this->setdireccion($empresa['direccion'] ?? '');
+        $this->setMunicipiosId($empresa['municipios_id'] ?? 0);
     }
+
+    public static function EmpresaRegistrada(mixed $nombre, mixed $telefono)
+    {
+        $query = "SELECT * FROM empresa where nombre = '" . $nombre. "' or telefono = ".$telefono;
+        $result = Empresa::search($query);
+        if (!empty($result) && count($result)>0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function __destruct()
     {
         if ($this->isConnected()) {
@@ -70,9 +89,9 @@ class Empresa
     }
 
     /**
-     * @param string $telefono
+     * @param int $telefono
      */
-    public function settelefono(string $telefono): void
+    public function settelefono(int $telefono): void
     {
         $this->telefono = $telefono;
     }
@@ -93,6 +112,32 @@ class Empresa
         $this->direccion = $direccion;
     }
 
+    /**
+     * @return int
+     */
+    public function getMunicipiosId(): int
+    {
+        return $this->municipios_id;
+    }
+
+    /**
+     * @param int $municipios_id
+     */
+    public function setMunicipiosId(int $municipios_id): void
+    {
+        $this->municipios_id = $municipios_id;
+    }
+
+    /**
+     * @return Municipios|null
+     */
+    public function getMunicipio(): Municipios|null
+    {
+        if (!empty($this->municipio_id)) {
+            return Municipios::searchForId($this->municipio_id) ?? new Municipios();
+        }
+        return null;
+    }
 
     protected function save(string $query): ?bool
     {
@@ -102,6 +147,7 @@ class Empresa
             ':nombre' =>   $this->getNombre(),
             ':telefono' =>   $this->gettelefono(),
             ':direccion' =>  $this->getdireccion(),
+            ':municipios_id' =>  $this->getMunicipiosId(),
         ];
         $this->Connect();
         $result = $this->insertRow($query, $arrData);
@@ -114,8 +160,7 @@ class Empresa
     public function insert(): ?bool
     {
         $query = "INSERT INTO Empresa VALUES (
-            :id,:nombre,:telefono,:direccion
-            
+            :id,:nombre,:telefono,:direccion,:municipios_id 
         )";
         if($this->save($query)){
             $idEmpresa = $this->getLastId("Empresa");
@@ -134,7 +179,7 @@ class Empresa
     public function update(): ?bool
     {
         $query = "UPDATE Empresa SET 
-            nombre = :nombre, telefono = :telefono, direccion = :direccion 
+            nombre = :nombre, telefono = :telefono, direccion = :direccion, municipios_id = :municipios_id 
              WHERE id = :id";
         return $this->save($query);
     }
@@ -155,7 +200,7 @@ class Empresa
             $getrows = $tmp->getRows($query);
             $tmp->Disconnect();
 
-            if (!empty($getrows)) {
+            if (!empty($getrows) && count($getrows) > 0) {
                 foreach ($getrows as $valor) {
                     $Empresa = new Empresa($valor);
                     array_push($arrEmpresa, $Empresa);
@@ -204,6 +249,7 @@ class Empresa
             'nombre' => $this->getNombre(),
             'telefono' => $this->gettelefono(),
             'direccion' => $this->getdireccion(),
+            'municipios_id' => $this->getMunicipio()
         ];
 
     }

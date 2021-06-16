@@ -5,7 +5,7 @@ require("../../../app/Controllers/InsumosController.php");
 
 
 use App\Controllers\empresa_idController;
-use App\Controllers\InsumosControllers;
+use App\Controllers\InsumosController;
 use App\Models\GeneralFunctions;
 use App\Models\Insumos;
 use Carbon\Carbon;
@@ -76,7 +76,7 @@ $pluralModel = $nameModel.'s';
                                 <p>
                                 <?php
 
-                                $DataInsumos = InsumosControllers::searchForID(["id" => $_GET["id"]]);
+                                $DataInsumos = InsumosController::searchForID(["id" => $_GET["id"]]);
                                 /* @var $DataInsumos Insumos */
                                 if (!empty($DataInsumos)) {
                                     ?>

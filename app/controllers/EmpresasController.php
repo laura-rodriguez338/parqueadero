@@ -8,7 +8,7 @@ namespace App\controllers;
     use Carbon\Carbon;
     use Carbon\Traits\Creator;
 
-class EmpresaControllers
+class EmpresasController
 {
     private array $dataEmpresa; //Almacenaran Datos que vengan de la interfaz
 
@@ -17,14 +17,15 @@ class EmpresaControllers
         $this->dataEmpresa = array();
         $this->dataEmpresa['id'] = $_FORM['id'] ?? NULL;
         $this->dataEmpresa['nombre'] = $_FORM['nombre'] ?? NULL;
-        $this->dataEmpresa['telefono'] = $_FORM['telefono'] ?? null;
-        $this->dataEmpresa[''] = $_FORM['direccion'] ?? NULL;
+        $this->dataEmpresa['telefono'] = $_FORM['telefono'] ?? 0;
+        $this->dataEmpresa['direccion'] = $_FORM['direccion'] ?? NULL;
+        $this->dataEmpresa['municipios_id'] = $_FORM['municipios_id'] ?? 0;
     }
 
     public function create()
     {
         try {
-            if (!empty($this->dataEmpresa['nombre']) && !empty($this->dataEmpresa['telefono']) && !Empresa::EmpresaRegistrado($this->dataEmpresa['nombre'], $this->dataEmpresa['telefono'])) {
+            if (!empty($this->dataEmpresa['nombre']) && !empty($this->dataEmpresa['telefono']) && !Empresa::EmpresaRegistrada($this->dataEmpresa['nombre'], $this->dataEmpresa['telefono'])) {
                 $Empresa = new Empresa ($this->dataEmpresa);
                 if ($Empresa->insert()) {
                     //unset($_SESSION['frmEmpresa']);
@@ -138,7 +139,7 @@ class EmpresaControllers
         if (is_array($arrEmpresa) && count($arrEmpresa) > 0) {
             /* @var $arrEmpresa Empresa[] */
             foreach ($arrEmpresa as $empresa)
-                if (!EmpresaControllers::EmpresaIsInArray($empresa->getId(), $params['arrExcluir']))
+                if (!EmpresasController::EmpresaIsInArray($empresa->getId(), $params['arrExcluir']))
                     $htmlSelect .= "<option " . (($empresa != "") ? (($params['defaultValue'] == $empresa->getId()) ? "selected" : "") : "") . " value='" . $empresa->getId() . "'>" . $empresa->getnombre() . " - " . $empresa->gettelefono() . "</option>";
         }
         $htmlSelect .= "</select>";

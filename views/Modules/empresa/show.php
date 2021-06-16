@@ -1,9 +1,9 @@
 <?php
 require("../../partials/routes.php");
 require_once("../../partials/check_login.php");
-require("../../../app/Controllers/EmpresaControllers.php");
+require("../../../app/Controllers/EmpresasController.php");
 
-use App\Controllers\EmpresaControllers;
+use App\Controllers\EmpresasController;
 use App\Models\GeneralFunctions;
 use App\Models\Empresa;
 
@@ -57,7 +57,7 @@ $pluralModel = $nameModel . 's';
                         <!-- Horizontal Form -->
                         <div class="card card-green">
                             <?php if (!empty($_GET["id"]) && isset($_GET["id"])) {
-                                $DataEmpresa = EmpresaControllers::searchForID(["id" => $_GET["id"]]);
+                                $DataEmpresa = EmpresasController::searchForID(["id" => $_GET["id"]]);
                                 /* @var $DataEmpresa Empresa */
                                 if (!empty($DataEmpresa)) {
                                     ?>

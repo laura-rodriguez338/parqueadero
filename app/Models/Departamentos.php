@@ -4,11 +4,19 @@ namespace App\Models;
 use App\Interfaces\Model;
 use Carbon\Carbon;
 use Exception;
+<<<<<<< HEAD
 use JsonSerializable;
 
 final class Departamentos extends AbstractDBConnection implements Model, JsonSerializable
 {
 
+=======
+use JetBrains\PhpStorm\ArrayShape;
+use JsonSerializable;
+
+final class Departamentos extends AbstractDBConnection implements Model
+{
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
     private ?int $id;
     private string $nombre;
     private string $region;
@@ -27,6 +35,7 @@ final class Departamentos extends AbstractDBConnection implements Model, JsonSer
     public function __construct(array $departamento = [])
     {
         parent::__construct();
+<<<<<<< HEAD
         $this->setId($departamento['id'] ?? NULL);
         $this->setNombre($departamento['nombre'] ?? '');
         $this->setRegion($departamento['region'] ?? '');
@@ -34,6 +43,18 @@ final class Departamentos extends AbstractDBConnection implements Model, JsonSer
         $this->setCreatedAt(!empty($departamento['created_at']) ? Carbon::parse($departamento['created_at']) : new Carbon());
         $this->setUpdatedAt(!empty($departamento['updated_at']) ? Carbon::parse($departamento['updated_at']) : new Carbon());
         $this->setDeletedAt(!empty($departamento['deleted_at']) ? Carbon::parse($departamento['deleted_at']) : new Carbon());
+=======
+        $this->setId($departamento['id'] ?? null);
+        $this->setNombre($departamento['nombre'] ?? '');
+        $this->setRegion($departamento['region'] ?? '');
+        $this->setEstado($departamento['estado'] ?? '');
+        $this->setCreatedAt(!empty($departamento['created_at']) ?
+            Carbon::parse($departamento['created_at']) : new Carbon());
+        $this->setUpdatedAt(!empty($departamento['updated_at']) ?
+            Carbon::parse($departamento['updated_at']) : new Carbon());
+        $this->setDeletedAt(!empty($departamento['deleted_at']) ?
+            Carbon::parse($departamento['deleted_at']) : new Carbon());
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
     }
 
     public function __destruct()
@@ -160,6 +181,7 @@ final class Departamentos extends AbstractDBConnection implements Model, JsonSer
      */
     public function getMunicipiosDepartamento(): ?array
     {
+<<<<<<< HEAD
         if(!empty($this-> MunicipiosDepartamento)){
             $this-> MunicipiosDepartamento = Municipios::search("SELECT * FROM parqueadero.municipios WHERE departamento_id = ".$this->id);
             return $this-> MunicipiosDepartamento;
@@ -168,6 +190,15 @@ final class Departamentos extends AbstractDBConnection implements Model, JsonSer
     }
 
     static function search($query): ?array
+=======
+        $this-> MunicipiosDepartamento = Municipios::search(
+            "SELECT * FROM municipios WHERE departamento_id = ".$this->id
+        );
+        return $this-> MunicipiosDepartamento ?? null;
+    }
+
+    public static function search($query): ?array
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
     {
         try {
             $arrDepartamentos = array();
@@ -183,17 +214,26 @@ final class Departamentos extends AbstractDBConnection implements Model, JsonSer
             }
             return $arrDepartamentos;
         } catch (Exception $e) {
+<<<<<<< HEAD
             GeneralFunctions::logFile('Exception',$e, 'error');
+=======
+            GeneralFunctions::logFile('Exception', $e);
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
         }
         return null;
     }
 
+<<<<<<< HEAD
     static function searchForId(int $id): ?Departamentos
+=======
+    public static function searchForId(int $id): ?Departamentos
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
     {
         try {
             if ($id > 0) {
                 $tmpDepartamento = new Departamentos();
                 $tmpDepartamento->Connect();
+<<<<<<< HEAD
                 $getrow = $tmpDepartamento->getRow("SELECT * FROM parqueadero.departamentos WHERE id =?", array($id));
                 $tmpDepartamento->Disconnect();
                 return ($getrow) ? new Departamentos($getrow) : null;
@@ -202,13 +242,29 @@ final class Departamentos extends AbstractDBConnection implements Model, JsonSer
             }
         } catch (Exception $e) {
             GeneralFunctions::logFile('Exception',$e, 'error');
+=======
+                $getrow = $tmpDepartamento->getRow("SELECT * FROM departamentos WHERE id =?", array($id));
+                $tmpDepartamento->Disconnect();
+                return ($getrow) ? new Departamentos($getrow) : null;
+            } else {
+                throw new Exception('Id de departamento Invalido');
+            }
+        } catch (Exception $e) {
+            GeneralFunctions::logFile('Exception', $e);
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
         }
         return null;
     }
 
+<<<<<<< HEAD
     static function getAll(): array
     {
         return Departamentos::search("SELECT * FROM parqueadero.departamentos");
+=======
+    public static function getAll(): array
+    {
+        return Departamentos::search("SELECT * FROM departamentos");
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
     }
 
     public function __toString() : string
@@ -216,7 +272,20 @@ final class Departamentos extends AbstractDBConnection implements Model, JsonSer
         return "Nombre: $this->nombre, Region: $this->region, Estado: $this->estado";
     }
 
+<<<<<<< HEAD
     public function jsonSerialize()
+=======
+    #[ArrayShape([
+        'id' => "int|null",
+        'nombre' => "string",
+        'region' => "string",
+        'estado' => "string",
+        'created_at' => "string",
+        'updated_at' => "string",
+        'deleted_at' => "string"
+    ])]
+    public function jsonSerialize(): array
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
     {
         return [
             'id' => $this->getId(),
@@ -229,9 +298,32 @@ final class Departamentos extends AbstractDBConnection implements Model, JsonSer
         ];
     }
 
+<<<<<<< HEAD
     protected function save(string $query): ?bool { return null; }
     function insert(){ }
     function update() { }
     function deleted() { }
 
 }
+=======
+    protected function save(string $query): ?bool
+    {
+        return null;
+    }
+
+    public function insert(): ?bool
+    {
+        return false;
+    }
+
+    public function update(): ?bool
+    {
+        return false;
+    }
+
+    public function deleted(): ?bool
+    {
+        return false;
+    }
+}
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf

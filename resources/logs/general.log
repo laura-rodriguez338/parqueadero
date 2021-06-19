@@ -907,6 +907,7 @@
 
 )
   
+<<<<<<< HEAD
 [2021-06-16T17:05:51.724039+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
 [2021-06-17T01:27:14.043130+00:00] General.ERROR: Exception  
 [2021-06-17T01:27:14.058159+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
@@ -2391,6 +2392,19 @@
         (
             [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
             [line] => 127
+=======
+[2021-06-11T14:25:09.725805+00:00] General.ERROR: Clase no encontrada {"descripcion":"La clase App\\Controllers\\InsumosController no fue encontrada "} 
+[2021-06-12T00:26:35.705781+00:00] General.ERROR: Exception  
+[2021-06-12T00:26:35.707651+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php  
+[2021-06-12T00:26:35.707985+00:00] General.ERROR: Line: 128  
+[2021-06-12T00:26:35.708184+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`insumos`, CONSTRAINT `fk_insumos_empresa` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-12T00:26:35.708386+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php
+            [line] => 128
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => execute
             [class] => PDOStatement
             [type] => ->
@@ -2402,13 +2416,19 @@
 
     [1] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
             [line] => 391
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 145
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => insertRow
             [class] => App\Models\AbstractDBConnection
             [type] => ->
             [args] => Array
                 (
+<<<<<<< HEAD
                     [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
                     [1] => Array
                         (
@@ -2424,6 +2444,20 @@
                             [:estado] => Activo
                             [:created_at] => 2021-06-19 00:57:26
                             [:updated_at] => 2021-06-19 00:57:26
+=======
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => detergente
+                            [:cantidad] => 10
+                            [:presentasion] => polvo
+                            [:valor] => 30000
+                            [:empresa_id] => 1
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                         )
 
                 )
@@ -2432,6 +2466,7 @@
 
     [2] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
             [line] => 403
             [function] => save
@@ -2522,12 +2557,26 @@
             [args] => Array
                 (
                     [0] => SELECT * FROM usuarios WHERE user = 'parqueadero'
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 158
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                 )
 
         )
 
     [3] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\UsuariosController.php
             [line] => 187
             [function] => Login
@@ -2550,12 +2599,22 @@
             [type] => ::
             [args] => Array
                 (
+=======
+            [file] => C:\laragon\www\parqueadero\test\testinsumos.php
+            [line] => 28
+            [function] => insert
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                 )
 
         )
 
 )
   
+<<<<<<< HEAD
 [2021-06-19T01:26:39.142092+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
 [2021-06-19T01:27:49.008581+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
 [2021-06-19T01:30:59.282489+00:00] General.ERROR: Exception  
@@ -2568,6 +2627,18 @@
         (
             [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
             [line] => 127
+=======
+[2021-06-12T00:26:35.717107+00:00] General.ERROR: Exception  
+[2021-06-12T00:26:35.717676+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php  
+[2021-06-12T00:26:35.717845+00:00] General.ERROR: Line: 128  
+[2021-06-12T00:26:35.717987+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`insumos`, CONSTRAINT `fk_insumos_empresa` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-12T00:26:35.718144+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php
+            [line] => 128
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => execute
             [class] => PDOStatement
             [type] => ->
@@ -2579,13 +2650,19 @@
 
     [1] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
             [line] => 391
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 145
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => insertRow
             [class] => App\Models\AbstractDBConnection
             [type] => ->
             [args] => Array
                 (
+<<<<<<< HEAD
                     [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
                     [1] => Array
                         (
@@ -2601,6 +2678,20 @@
                             [:estado] => Activo
                             [:created_at] => 2021-06-19 01:30:59
                             [:updated_at] => 2021-06-19 01:30:59
+=======
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => jabonliquido
+                            [:cantidad] => 15
+                            [:presentasion] => liquido
+                            [:valor] => 40000
+                            [:empresa_id] => 1
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                         )
 
                 )
@@ -2609,6 +2700,7 @@
 
     [2] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
             [line] => 403
             [function] => save
@@ -2617,12 +2709,26 @@
             [args] => Array
                 (
                     [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 158
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                 )
 
         )
 
     [3] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
             [line] => 33
             [function] => insert
@@ -2640,6 +2746,12 @@
             [line] => 29
             [function] => create
             [class] => App\Controllers\ProductosController
+=======
+            [file] => C:\laragon\www\parqueadero\test\testinsumos.php
+            [line] => 39
+            [function] => insert
+            [class] => App\Models\Insumos
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [type] => ->
             [args] => Array
                 (
@@ -2649,6 +2761,7 @@
 
 )
   
+<<<<<<< HEAD
 [2021-06-19T01:31:22.249119+00:00] General.ERROR: Exception  
 [2021-06-19T01:31:22.249708+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
 [2021-06-19T01:31:22.249859+00:00] General.ERROR: Line: 127  
@@ -2659,6 +2772,18 @@
         (
             [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
             [line] => 127
+=======
+[2021-06-12T00:30:27.355880+00:00] General.ERROR: Exception  
+[2021-06-12T00:30:27.356608+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php  
+[2021-06-12T00:30:27.356723+00:00] General.ERROR: Line: 128  
+[2021-06-12T00:30:27.356827+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`insumos`, CONSTRAINT `fk_insumos_empresa` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-12T00:30:27.356944+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php
+            [line] => 128
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => execute
             [class] => PDOStatement
             [type] => ->
@@ -2670,13 +2795,19 @@
 
     [1] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
             [line] => 391
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 145
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => insertRow
             [class] => App\Models\AbstractDBConnection
             [type] => ->
             [args] => Array
                 (
+<<<<<<< HEAD
                     [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
                     [1] => Array
                         (
@@ -2692,6 +2823,20 @@
                             [:estado] => Activo
                             [:created_at] => 2021-06-19 01:31:22
                             [:updated_at] => 2021-06-19 01:31:22
+=======
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => detergente
+                            [:cantidad] => 10
+                            [:presentasion] => polvo
+                            [:valor] => 30000
+                            [:empresa_id] => 1
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                         )
 
                 )
@@ -2700,6 +2845,7 @@
 
     [2] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
             [line] => 403
             [function] => save
@@ -2708,12 +2854,26 @@
             [args] => Array
                 (
                     [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 158
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                 )
 
         )
 
     [3] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
             [line] => 33
             [function] => insert
@@ -2731,6 +2891,12 @@
             [line] => 29
             [function] => create
             [class] => App\Controllers\ProductosController
+=======
+            [file] => C:\laragon\www\parqueadero\test\testinsumos.php
+            [line] => 28
+            [function] => insert
+            [class] => App\Models\Insumos
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [type] => ->
             [args] => Array
                 (
@@ -2740,6 +2906,7 @@
 
 )
   
+<<<<<<< HEAD
 [2021-06-19T01:34:20.292580+00:00] General.ERROR: Exception  
 [2021-06-19T01:34:20.293235+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
 [2021-06-19T01:34:20.293343+00:00] General.ERROR: Line: 127  
@@ -2750,6 +2917,18 @@
         (
             [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
             [line] => 127
+=======
+[2021-06-12T00:30:27.363963+00:00] General.ERROR: Exception  
+[2021-06-12T00:30:27.364488+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php  
+[2021-06-12T00:30:27.364619+00:00] General.ERROR: Line: 128  
+[2021-06-12T00:30:27.364739+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`insumos`, CONSTRAINT `fk_insumos_empresa` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-12T00:30:27.364871+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php
+            [line] => 128
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => execute
             [class] => PDOStatement
             [type] => ->
@@ -2761,13 +2940,19 @@
 
     [1] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
             [line] => 190
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 145
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => insertRow
             [class] => App\Models\AbstractDBConnection
             [type] => ->
             [args] => Array
                 (
+<<<<<<< HEAD
                     [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
                     [1] => Array
                         (
@@ -2777,6 +2962,20 @@
                             [:cantidad] => 15
                             [:precio_venta] => 15.4
                             [:created_at] => 2021-06-19 01:34:20
+=======
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => jabonliquido
+                            [:cantidad] => 15
+                            [:presentasion] => liquido
+                            [:valor] => 40000
+                            [:empresa_id] => 1
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                         )
 
                 )
@@ -2785,6 +2984,7 @@
 
     [2] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
             [line] => 198
             [function] => save
@@ -2793,12 +2993,26 @@
             [args] => Array
                 (
                     [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Insumos.php
+            [line] => 158
+            [function] => save
+            [class] => App\Models\Insumos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Insumos VALUES (
+            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
+            
+        )
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                 )
 
         )
 
     [3] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
             [line] => 32
             [function] => insert
@@ -2816,6 +3030,12 @@
             [line] => 29
             [function] => create
             [class] => App\Controllers\DetalleVentasController
+=======
+            [file] => C:\laragon\www\parqueadero\test\testinsumos.php
+            [line] => 39
+            [function] => insert
+            [class] => App\Models\Insumos
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [type] => ->
             [args] => Array
                 (
@@ -2825,6 +3045,7 @@
 
 )
   
+<<<<<<< HEAD
 [2021-06-19T01:34:54.466743+00:00] General.ERROR: Exception  
 [2021-06-19T01:34:54.467302+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
 [2021-06-19T01:34:54.467483+00:00] General.ERROR: Line: 127  
@@ -2835,11 +3056,27 @@
         (
             [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
             [line] => 127
+=======
+[2021-06-16T14:38:11.224020+00:00] General.ERROR: Clase no encontrada {"descripcion":"La clase App\\Controllers\\EmpresasController no fue encontrada "} 
+[2021-06-16T14:42:08.171298+00:00] General.ERROR: Clase no encontrada {"descripcion":"La clase App\\Controllers\\EmpresasController no fue encontrada "} 
+[2021-06-16T14:43:11.975872+00:00] General.ERROR: Clase no encontrada {"descripcion":"La clase App\\Controllers\\EmpresasController no fue encontrada "} 
+[2021-06-16T14:51:32.298137+00:00] General.ERROR: Exception  
+[2021-06-16T14:51:32.299646+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php  
+[2021-06-16T14:51:32.299864+00:00] General.ERROR: Line: 102  
+[2021-06-16T14:51:32.300032+00:00] General.ERROR: Mensaje: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1  
+[2021-06-16T14:51:32.300424+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php
+            [line] => 102
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => execute
             [class] => PDOStatement
             [type] => ->
             [args] => Array
                 (
+<<<<<<< HEAD
                 )
 
         )
@@ -2862,12 +3099,17 @@
                             [:cantidad] => 14
                             [:precio_venta] => 13.8
                             [:created_at] => 2021-06-19 01:34:54
+=======
+                    [0] => Array
+                        (
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                         )
 
                 )
 
         )
 
+<<<<<<< HEAD
     [2] => Array
         (
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
@@ -2934,10 +3176,18 @@
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
             [line] => 190
             [function] => insertRow
+=======
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\Empresa.php
+            [line] => 199
+            [function] => getRows
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [class] => App\Models\AbstractDBConnection
             [type] => ->
             [args] => Array
                 (
+<<<<<<< HEAD
                     [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
                     [1] => Array
                         (
@@ -2949,12 +3199,16 @@
                             [:created_at] => 2021-06-19 01:36:31
                         )
 
+=======
+                    [0] => SELECT * FROM empresa where nombre = 'Socios S.A' or telefono = 
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                 )
 
         )
 
     [2] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
             [line] => 198
             [function] => save
@@ -2963,12 +3217,23 @@
             [args] => Array
                 (
                     [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Empresa.php
+            [line] => 36
+            [function] => search
+            [class] => App\Models\Empresa
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => SELECT * FROM empresa where nombre = 'Socios S.A' or telefono = 
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                 )
 
         )
 
     [3] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
             [line] => 32
             [function] => insert
@@ -2976,16 +3241,34 @@
             [type] => ->
             [args] => Array
                 (
+=======
+            [file] => C:\laragon\www\parqueadero\app\controllers\EmpresasController.php
+            [line] => 28
+            [function] => EmpresaRegistrada
+            [class] => App\Models\Empresa
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => Socios S.A
+                    [1] => 
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                 )
 
         )
 
     [4] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
             [line] => 29
             [function] => create
             [class] => App\Controllers\DetalleVentasController
+=======
+            [file] => C:\laragon\www\parqueadero\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\controllers\EmpresasController
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [type] => ->
             [args] => Array
                 (
@@ -2995,6 +3278,7 @@
 
 )
   
+<<<<<<< HEAD
 [2021-06-19T01:36:47.394947+00:00] General.ERROR: Exception  
 [2021-06-19T01:36:47.395575+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
 [2021-06-19T01:36:47.395675+00:00] General.ERROR: Line: 127  
@@ -3005,6 +3289,18 @@
         (
             [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
             [line] => 127
+=======
+[2021-06-16T14:56:08.461174+00:00] General.ERROR: Exception  
+[2021-06-16T14:56:08.463086+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php  
+[2021-06-16T14:56:08.463345+00:00] General.ERROR: Line: 128  
+[2021-06-16T14:56:08.463608+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`empresa`, CONSTRAINT `fk_empresa_municipios1` FOREIGN KEY (`municipios_id`) REFERENCES `municipios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-16T14:56:08.463968+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php
+            [line] => 128
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => execute
             [class] => PDOStatement
             [type] => ->
@@ -3016,13 +3312,19 @@
 
     [1] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
             [line] => 190
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Empresa.php
+            [line] => 153
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => insertRow
             [class] => App\Models\AbstractDBConnection
             [type] => ->
             [args] => Array
                 (
+<<<<<<< HEAD
                     [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
                     [1] => Array
                         (
@@ -3032,6 +3334,18 @@
                             [:cantidad] => 3
                             [:precio_venta] => 15.4
                             [:created_at] => 2021-06-19 01:36:47
+=======
+                    [0] => INSERT INTO Empresa VALUES (
+            :id,:nombre,:telefono,:direccion,:municipios_id 
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => 
+                            [:telefono] => 0
+                            [:direccion] => 
+                            [:municipios_id] => 0
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                         )
 
                 )
@@ -3040,6 +3354,7 @@
 
     [2] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
             [line] => 198
             [function] => save
@@ -3048,16 +3363,35 @@
             [args] => Array
                 (
                     [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Empresa.php
+            [line] => 165
+            [function] => save
+            [class] => App\Models\Empresa
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Empresa VALUES (
+            :id,:nombre,:telefono,:direccion,:municipios_id 
+        )
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                 )
 
         )
 
     [3] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
             [line] => 32
             [function] => insert
             [class] => App\Models\DetalleVentas
+=======
+            [file] => C:\laragon\www\parqueadero\app\controllers\EmpresasController.php
+            [line] => 30
+            [function] => insert
+            [class] => App\Models\Empresa
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [type] => ->
             [args] => Array
                 (
@@ -3067,10 +3401,17 @@
 
     [4] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
             [line] => 29
             [function] => create
             [class] => App\Controllers\DetalleVentasController
+=======
+            [file] => C:\laragon\www\parqueadero\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\controllers\EmpresasController
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [type] => ->
             [args] => Array
                 (
@@ -3080,6 +3421,7 @@
 
 )
   
+<<<<<<< HEAD
 [2021-06-19T01:41:14.740258+00:00] General.ERROR: Exception  
 [2021-06-19T01:41:14.741181+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
 [2021-06-19T01:41:14.741414+00:00] General.ERROR: Line: 127  
@@ -3090,6 +3432,18 @@
         (
             [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
             [line] => 127
+=======
+[2021-06-16T14:56:59.396578+00:00] General.ERROR: Exception  
+[2021-06-16T14:56:59.397868+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php  
+[2021-06-16T14:56:59.398286+00:00] General.ERROR: Line: 128  
+[2021-06-16T14:56:59.398496+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`empresa`, CONSTRAINT `fk_empresa_municipios1` FOREIGN KEY (`municipios_id`) REFERENCES `municipios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-16T14:56:59.398861+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php
+            [line] => 128
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => execute
             [class] => PDOStatement
             [type] => ->
@@ -3101,13 +3455,19 @@
 
     [1] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
             [line] => 190
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Empresa.php
+            [line] => 153
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => insertRow
             [class] => App\Models\AbstractDBConnection
             [type] => ->
             [args] => Array
                 (
+<<<<<<< HEAD
                     [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
                     [1] => Array
                         (
@@ -3117,6 +3477,18 @@
                             [:cantidad] => 2
                             [:precio_venta] => 11000
                             [:created_at] => 2021-06-19 01:41:14
+=======
+                    [0] => INSERT INTO Empresa VALUES (
+            :id,:nombre,:telefono,:direccion,:municipios_id 
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => 
+                            [:telefono] => 0
+                            [:direccion] => 
+                            [:municipios_id] => 0
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                         )
 
                 )
@@ -3125,6 +3497,7 @@
 
     [2] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
             [line] => 198
             [function] => save
@@ -3133,16 +3506,35 @@
             [args] => Array
                 (
                     [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Empresa.php
+            [line] => 166
+            [function] => save
+            [class] => App\Models\Empresa
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Empresa VALUES (
+            :id,:nombre,:telefono,:direccion,:municipios_id 
+        )
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                 )
 
         )
 
     [3] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
             [line] => 32
             [function] => insert
             [class] => App\Models\DetalleVentas
+=======
+            [file] => C:\laragon\www\parqueadero\app\controllers\EmpresasController.php
+            [line] => 30
+            [function] => insert
+            [class] => App\Models\Empresa
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [type] => ->
             [args] => Array
                 (
@@ -3152,10 +3544,17 @@
 
     [4] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
             [line] => 29
             [function] => create
             [class] => App\Controllers\DetalleVentasController
+=======
+            [file] => C:\laragon\www\parqueadero\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\controllers\EmpresasController
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [type] => ->
             [args] => Array
                 (
@@ -3165,6 +3564,7 @@
 
 )
   
+<<<<<<< HEAD
 [2021-06-19T01:45:09.997276+00:00] General.ERROR: Exception  
 [2021-06-19T01:45:09.997897+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
 [2021-06-19T01:45:09.998003+00:00] General.ERROR: Line: 127  
@@ -3175,6 +3575,18 @@
         (
             [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
             [line] => 127
+=======
+[2021-06-16T14:57:36.436662+00:00] General.ERROR: Exception  
+[2021-06-16T14:57:36.437551+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php  
+[2021-06-16T14:57:36.437798+00:00] General.ERROR: Line: 128  
+[2021-06-16T14:57:36.437979+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`empresa`, CONSTRAINT `fk_empresa_municipios1` FOREIGN KEY (`municipios_id`) REFERENCES `municipios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-16T14:57:36.438180+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php
+            [line] => 128
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => execute
             [class] => PDOStatement
             [type] => ->
@@ -3186,13 +3598,19 @@
 
     [1] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
             [line] => 190
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Empresa.php
+            [line] => 153
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => insertRow
             [class] => App\Models\AbstractDBConnection
             [type] => ->
             [args] => Array
                 (
+<<<<<<< HEAD
                     [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
                     [1] => Array
                         (
@@ -3202,6 +3620,18 @@
                             [:cantidad] => 1
                             [:precio_venta] => 15.4
                             [:created_at] => 2021-06-19 01:45:09
+=======
+                    [0] => INSERT INTO Empresa VALUES (
+            :id,:nombre,:telefono,:direccion,:municipios_id 
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => 
+                            [:telefono] => 0
+                            [:direccion] => 
+                            [:municipios_id] => 0
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                         )
 
                 )
@@ -3210,6 +3640,7 @@
 
     [2] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
             [line] => 198
             [function] => save
@@ -3218,16 +3649,35 @@
             [args] => Array
                 (
                     [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Empresa.php
+            [line] => 166
+            [function] => save
+            [class] => App\Models\Empresa
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Empresa VALUES (
+            :id,:nombre,:telefono,:direccion,:municipios_id 
+        )
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                 )
 
         )
 
     [3] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
             [line] => 32
             [function] => insert
             [class] => App\Models\DetalleVentas
+=======
+            [file] => C:\laragon\www\parqueadero\app\controllers\EmpresasController.php
+            [line] => 31
+            [function] => insert
+            [class] => App\Models\Empresa
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [type] => ->
             [args] => Array
                 (
@@ -3237,10 +3687,17 @@
 
     [4] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
             [line] => 29
             [function] => create
             [class] => App\Controllers\DetalleVentasController
+=======
+            [file] => C:\laragon\www\parqueadero\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\controllers\EmpresasController
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [type] => ->
             [args] => Array
                 (
@@ -3250,6 +3707,7 @@
 
 )
   
+<<<<<<< HEAD
 [2021-06-19T01:46:29.944399+00:00] General.ERROR: Exception  
 [2021-06-19T01:46:29.944867+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
 [2021-06-19T01:46:29.944975+00:00] General.ERROR: Line: 127  
@@ -3260,6 +3718,18 @@
         (
             [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
             [line] => 127
+=======
+[2021-06-16T14:57:49.085972+00:00] General.ERROR: Exception  
+[2021-06-16T14:57:49.088001+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php  
+[2021-06-16T14:57:49.088316+00:00] General.ERROR: Line: 128  
+[2021-06-16T14:57:49.088579+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`empresa`, CONSTRAINT `fk_empresa_municipios1` FOREIGN KEY (`municipios_id`) REFERENCES `municipios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-16T14:57:49.088870+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php
+            [line] => 128
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => execute
             [class] => PDOStatement
             [type] => ->
@@ -3271,13 +3741,19 @@
 
     [1] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
             [line] => 190
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Empresa.php
+            [line] => 153
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => insertRow
             [class] => App\Models\AbstractDBConnection
             [type] => ->
             [args] => Array
                 (
+<<<<<<< HEAD
                     [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
                     [1] => Array
                         (
@@ -3287,6 +3763,18 @@
                             [:cantidad] => 1
                             [:precio_venta] => 11000
                             [:created_at] => 2021-06-19 01:46:29
+=======
+                    [0] => INSERT INTO Empresa VALUES (
+            :id,:nombre,:telefono,:direccion,:municipios_id 
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => 
+                            [:telefono] => 0
+                            [:direccion] => 
+                            [:municipios_id] => 0
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                         )
 
                 )
@@ -3295,6 +3783,7 @@
 
     [2] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
             [line] => 198
             [function] => save
@@ -3303,16 +3792,35 @@
             [args] => Array
                 (
                     [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Empresa.php
+            [line] => 166
+            [function] => save
+            [class] => App\Models\Empresa
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Empresa VALUES (
+            :id,:nombre,:telefono,:direccion,:municipios_id 
+        )
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                 )
 
         )
 
     [3] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
             [line] => 32
             [function] => insert
             [class] => App\Models\DetalleVentas
+=======
+            [file] => C:\laragon\www\parqueadero\app\controllers\EmpresasController.php
+            [line] => 31
+            [function] => insert
+            [class] => App\Models\Empresa
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [type] => ->
             [args] => Array
                 (
@@ -3322,10 +3830,17 @@
 
     [4] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
             [line] => 29
             [function] => create
             [class] => App\Controllers\DetalleVentasController
+=======
+            [file] => C:\laragon\www\parqueadero\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\controllers\EmpresasController
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [type] => ->
             [args] => Array
                 (
@@ -3335,6 +3850,7 @@
 
 )
   
+<<<<<<< HEAD
 [2021-06-19T01:50:46.734123+00:00] General.ERROR: Exception  
 [2021-06-19T01:50:46.735159+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
 [2021-06-19T01:50:46.735323+00:00] General.ERROR: Line: 127  
@@ -3345,6 +3861,18 @@
         (
             [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
             [line] => 127
+=======
+[2021-06-16T14:58:32.298491+00:00] General.ERROR: Exception  
+[2021-06-16T14:58:32.299457+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php  
+[2021-06-16T14:58:32.299693+00:00] General.ERROR: Line: 128  
+[2021-06-16T14:58:32.299910+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`empresa`, CONSTRAINT `fk_empresa_municipios1` FOREIGN KEY (`municipios_id`) REFERENCES `municipios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-16T14:58:32.300280+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero\app\Models\AbstractDBConnection.php
+            [line] => 128
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => execute
             [class] => PDOStatement
             [type] => ->
@@ -3356,13 +3884,19 @@
 
     [1] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
             [line] => 190
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Empresa.php
+            [line] => 153
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [function] => insertRow
             [class] => App\Models\AbstractDBConnection
             [type] => ->
             [args] => Array
                 (
+<<<<<<< HEAD
                     [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
                     [1] => Array
                         (
@@ -3372,6 +3906,18 @@
                             [:cantidad] => 1
                             [:precio_venta] => 11000
                             [:created_at] => 2021-06-19 01:50:46
+=======
+                    [0] => INSERT INTO Empresa VALUES (
+            :id,:nombre,:telefono,:direccion,:municipios_id 
+        )
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => Socios S.A
+                            [:telefono] => 1243436
+                            [:direccion] => 
+                            [:municipios_id] => 0
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                         )
 
                 )
@@ -3380,6 +3926,7 @@
 
     [2] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
             [line] => 198
             [function] => save
@@ -3388,16 +3935,35 @@
             [args] => Array
                 (
                     [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+=======
+            [file] => C:\laragon\www\parqueadero\app\Models\Empresa.php
+            [line] => 166
+            [function] => save
+            [class] => App\Models\Empresa
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO Empresa VALUES (
+            :id,:nombre,:telefono,:direccion,:municipios_id 
+        )
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                 )
 
         )
 
     [3] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
             [line] => 32
             [function] => insert
             [class] => App\Models\DetalleVentas
+=======
+            [file] => C:\laragon\www\parqueadero\app\controllers\EmpresasController.php
+            [line] => 30
+            [function] => insert
+            [class] => App\Models\Empresa
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [type] => ->
             [args] => Array
                 (
@@ -3407,10 +3973,17 @@
 
     [4] => Array
         (
+<<<<<<< HEAD
             [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
             [line] => 29
             [function] => create
             [class] => App\Controllers\DetalleVentasController
+=======
+            [file] => C:\laragon\www\parqueadero\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\controllers\EmpresasController
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             [type] => ->
             [args] => Array
                 (
@@ -3420,5 +3993,8 @@
 
 )
   
+<<<<<<< HEAD
 [2021-06-19T01:54:38.174142+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
 [2021-06-19T01:55:22.911838+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
+=======
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf

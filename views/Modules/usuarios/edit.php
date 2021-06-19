@@ -1,18 +1,18 @@
 <?php
 require("../../partials/routes.php");
 require_once("../../partials/check_login.php");
-require("../../../app/Controllers/UsuariosController.php");
+require("../../../app/Controllers/InsumosController.php");
 
-use App\Controllers\DepartamentosController;
-use App\Controllers\MunicipiosController;
-use App\Controllers\UsuariosController;
+
+use App\Controllers\empresa_idController;
+use App\Controllers\InsumosController;
 use App\Models\GeneralFunctions;
-use App\Models\Usuarios;
+use App\Models\Insumos;
 use Carbon\Carbon;
 
-$nameModel = "Usuario";
+$nameModel = "Insumos";
 $pluralModel = $nameModel.'s';
-$frmSession = $_SESSION['frm'.$pluralModel] ?? null;
+//$frmSession = $_SESSION['frm'.$pluralModel] ?? null;
 
 ?>
 <!DOCTYPE html>
@@ -76,30 +76,31 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? null;
                                 <p>
                                 <?php
 
-                                $DataUsuario = UsuariosController::searchForID(["id" => $_GET["id"]]);
-                                /* @var $DataUsuario Usuarios */
-                                if (!empty($DataUsuario)) {
+                                $DataInsumos = InsumosController::searchForID(["id" => $_GET["id"]]);
+                                /* @var $DataInsumos Insumos */
+                                if (!empty($DataInsumos)) {
                                     ?>
                                     <!-- form start -->
                                     <div class="card-body">
                                         <form class="form-horizontal" enctype="multipart/form-data" method="post" id="frmEdit<?= $nameModel ?>"
                                               name="frmEdit<?= $nameModel ?>"
                                               action="../../../app/Controllers/MainController.php?controller=<?= $pluralModel ?>&action=edit">
-                                            <input id="id" name="id" value="<?= $DataUsuario->getId(); ?>" hidden
+                                            <input id="id" name="id" value="<?= $DataInsumos->getId(); ?>" hidden
                                                    required="required" type="text">
                                             <div class="row">
                                                 <div class="col-sm-10">
                                                     <div class="form-group row">
-                                                        <label for="nombres" class="col-sm-2 col-form-label">Nombres</label>
+                                                        <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
                                                         <div class="col-sm-10">
-                                                            <input required type="text" class="form-control" id="nombres"
-                                                                   name="nombres" value="<?= $DataUsuario->getNombres(); ?>"
-                                                                   placeholder="Ingrese sus nombres">
+                                                            <input required type="text" class="form-control" id="nombre"
+                                                                   name="nombre" value="<?= $DataInsumos->getNombre(); ?>"
+                                                                   placeholder="Ingrese sus nombre">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
-                                                        <label for="apellidos" class="col-sm-2 col-form-label">Apellidos</label>
+                                                        <label for="cantidad" class="col-sm-2 col-form-label">Cantidad</label>
                                                         <div class="col-sm-10">
+<<<<<<< HEAD:views/Modules/usuarios/edit.php
                                                             <input required type="text" class="form-control" id="apellidos"
                                                                    name="apellidos" value="<?= $DataUsuario->getApellidos(); ?>"
                                                                    placeholder="Ingrese sus apellidos">
@@ -136,65 +137,44 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? null;
                                                                    id="documento" name="documento"
                                                                    value="<?= $DataUsuario->getDocumento(); ?>"
                                                                    placeholder="Ingrese su documento">
+=======
+                                                            <input required type="text" class="form-control" id="cantidad"
+                                                                   name="cantidad" value="<?= $DataInsumos->getCantidad(); ?>"
+                                                                   placeholder="Ingrese su cantidad">
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf:views/Modules/insumos/edit.php
                                                         </div>
+
                                                     </div>
                                                     <div class="form-group row">
-                                                        <label for="telefono" class="col-sm-2 col-form-label">Telefono</label>
+                                                        <label for="Presentasion" class="col-sm-2 col-form-label">Presentasion</label>
                                                         <div class="col-sm-10">
-                                                            <input required type="number" minlength="6" class="form-control"
-                                                                   id="telefono" name="telefono"
-                                                                   value="<?= $DataUsuario->getTelefono(); ?>"
-                                                                   placeholder="Ingrese su telefono">
+                                                            <input required type="text" class="form-control" id="presentasion"
+                                                                   name="presentasion" value="<?= $DataInsumos->getPresentasion(); ?>"
+                                                                   placeholder="Ingrese su presentasion">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
-                                                        <label for="direccion" class="col-sm-2 col-form-label">Direccion</label>
+                                                        <label for="valor" class="col-sm-2 col-form-label">Valor</label>
                                                         <div class="col-sm-10">
-                                                            <input required type="text" class="form-control" id="direccion"
-                                                                   name="direccion" value="<?= $DataUsuario->getDireccion(); ?>"
-                                                                   placeholder="Ingrese su direccion">
+                                                            <input required type="text" class="form-control" id="valor"
+                                                                   name="valor" value="<?= $DataInsumos->getValor(); ?>"
+                                                                   placeholder="Ingrese su valor">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
-                                                        <label for="municipio_id" class="col-sm-2 col-form-label">Municipio</label>
-                                                        <div class="col-sm-5">
-                                                            <?=
-                                                            DepartamentosController::selectDepartamentos(
-                                                                array(
-                                                                    'id' => 'departamento_id',
-                                                                    'name' => 'departamento_id',
-                                                                    'defaultValue' => (!empty($DataUsuario)) ? $DataUsuario->getMunicipio()->getDepartamento()->getId() : '15',
-                                                                    'class' => 'form-control select2bs4 select2-info',
-                                                                    'where' => "estado = 'Activo'"
-                                                                )
-                                                            )
-                                                            ?>
-                                                        </div>
-                                                        <div class="col-sm-5 ">
-                                                            <?= MunicipiosController::selectMunicipios(
-                                                                array (
-                                                                    'id' => 'municipio_id',
-                                                                    'name' => 'municipio_id',
-                                                                    'defaultValue' => (!empty($DataUsuario)) ? $DataUsuario->getMunicipioId() : '',
-                                                                    'class' => 'form-control select2bs4 select2-info',
-                                                                    'where' => "departamento_id = ".$DataUsuario->getMunicipio()->getDepartamento()->getId()." and estado = 'Activo'")
-                                                            )
-                                                            ?>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label for="fecha_nacimiento" class="col-sm-2 col-form-label">Fecha Nacimiento</label>
+                                                        <label for="empresa_id" class="col-sm-2 col-form-label">empresa_id</label>
                                                         <div class="col-sm-10">
-                                                            <input required type="date" max="<?= Carbon::now()->subYear(12)->format('Y-m-d') ?>"
-                                                                   value="<?= $DataUsuario->getFechaNacimiento()->toDateString(); ?>" class="form-control" id="fecha_nacimiento"
-                                                                   name="fecha_nacimiento" placeholder="Ingrese su Fecha de Nacimiento">
+                                                            <input required type="text" class="form-control" id="valor"
+                                                                   name="empresa_id" value="<?= $DataInsumos->getempresa_id(); ?>"
+                                                                   placeholder="Ingrese su empresa_id">
                                                         </div>
-                                                    </div>
+
+
                                                     <?php if ($_SESSION['UserInSession']['rol'] == 'Administrador'){ ?>
                                                         <div class="form-group row">
-                                                            <label for="user" class="col-sm-2 col-form-label">Usuario</label>
+                                                            <label for="user" class="col-sm-2 col-form-label">Insumos</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control" id="user" name="user" value="<?= $DataUsuario->getUser(); ?>" placeholder="Ingrese su Usuario">
+                                                                <input type="text" class="form-control" id="user" name="user" value="<?= $DataInsumos->getUser(); ?>" placeholder="Ingrese su Insumos">
                                                             </div>
                                                         </div>
 
@@ -205,27 +185,6 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? null;
                                                             </div>
                                                         </div>
 
-                                                        <div class="form-group row">
-                                                            <label for="rol" class="col-sm-2 col-form-label">Rol</label>
-                                                            <div class="col-sm-10">
-                                                                <select required id="rol" name="rol" class="custom-select">
-                                                                    <option <?= ($DataUsuario->getRol() == "Administrador") ? "selected" : ""; ?> value="Administrador">Administrador</option>
-                                                                    <option <?= ($DataUsuario->getRol() == "Empleado") ? "selected" : ""; ?> value="Empleado">Empleado</option>
-                                                                    <option <?= ($DataUsuario->getRol() == "Cliente") ? "selected" : ""; ?> value="Cliente">Cliente</option>
-                                                                    <option <?= ($DataUsuario->getRol() == "Proveedor") ? "selected" : ""; ?> value="Proveedor">Proveedor</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group row">
-                                                            <label for="estado" class="col-sm-2 col-form-label">Estado</label>
-                                                            <div class="col-sm-10">
-                                                                <select required id="estado" name="estado" class="custom-select">
-                                                                    <option <?= ($DataUsuario->getEstado() == "Activo") ? "selected" : ""; ?> value="Activo">Activo</option>
-                                                                    <option <?= ($DataUsuario->getEstado() == "Inactivo") ? "selected" : ""; ?> value="Inactivo">Inactivo</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
                                                     <?php } ?>
                                                 </div>
                                                 <div class="col-sm-2">
@@ -238,16 +197,16 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? null;
                                                                 <label class="btn btn-default btn-file">
                                                                     <span>Seleccionar</span>
                                                                     <!-- The file is stored here. -->
-                                                                    <input value="<?= $DataUsuario->getFoto(); ?>" type="file" id="foto" name="foto">
+                                                                    <input value="<?= $DataInsumos->getFoto(); ?>" type="file" id="foto" name="foto">
                                                                 </label>
                                                                 <button type="button" class="btn btn-default">Eliminar</button>
                                                             </div>
                                                             <div class="panel-footer">
-                                                                <?php if(!empty($DataUsuario->getFoto())){?>
-                                                                    <img id="thumbFoto" src="../../public/uploadFiles/photos/<?= $DataUsuario->getFoto(); ?>"
+                                                                <?php if(!empty($DataInsumos->getFoto())){?>
+                                                                    <img id="thumbFoto" src="../../public/uploadFiles/photos/<?= $DataInsumos->getFoto(); ?>"
                                                                          alt="Sin Foto de Perfil" class="thumbnail" style="max-width: 250px; max-height: 250px">
                                                                 <?php } ?>
-                                                                <input type="hidden" name="nameFoto" id="nameFoto" value="<?= $DataUsuario->getFoto() ?? '' ?>">
+                                                                <input type="hidden" name="nameFoto" id="nameFoto" value="<?= $DataInsumos->getFoto() ?? '' ?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -288,20 +247,20 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? null;
 <?php require('../../partials/scripts.php'); ?>
 <script>
     $(function() {
-        $('#departamento_id').on('change', function() {
+        $('#empresa_id').on('change', function() {
             $.post("../../../app/Controllers/MainController.php?controller=Municipios&action=selectMunicipios", {
                 isMultiple: false,
                 isRequired: true,
-                id: "municipio_id",
-                nombre: "municipio_id",
+                id: "empresa_id",
+                nombre: "empresa_id",
                 defaultValue: "",
                 class: "form-control select2bs4 select2-info",
-                where: "departamento_id = "+$('#departamento_id').val()+" and estado = 'Activo'",
+                where: "empresa_id = "+$('#empresa_id').val()+" and estado = 'Activo'",
                 request: 'ajax'
             }, function(e) {
                 if (e)
                     console.log(e);
-                $("#municipio_id").html(e).select2({ height: '100px'});
+                $("#empresa_id").html(e).select2({ height: '100px'});
             })
         });
         $('#foto').on("change", function(){

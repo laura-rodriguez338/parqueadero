@@ -1,13 +1,13 @@
 <?php
 require("../../partials/routes.php");
 require_once("../../partials/check_login.php");
-require("../../../app/Controllers/InsumosController.php");
+require("../../../app/Controllers/EmpresasController.php");
 
-use App\Controllers\InsumosController;
+use App\Controllers\EmpresasController;
 use App\Models\GeneralFunctions;
-use App\Models\Insumos;
+use App\Models\Empresa;
 
-$nameModel = "Insumos";
+$nameModel = "Empresa";
 $pluralModel = $nameModel . 's';
 //$frmSession = $_SESSION['frm' . $pluralModel] ?? NULL;
 ?>
@@ -37,8 +37,8 @@ $pluralModel = $nameModel . 's';
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a
-                                        href="<?= $baseURL; ?>/views/"><?= $_ENV['ALIASE_SITE'] ?></a></li>
-                            <li class="breadcrumb-item"><a href="index.php"><?= $pluralModel ?></a></li>
+                                    href="<?= $baseURL; ?>/views"><?= $_ENV['ALIASE_SITE'] ?></a></li>
+                            <li class="breadcrumb-item"><a href="../../../../parqueadero/views/Modules/empresa/index.php"><?= $pluralModel ?></a></li>
                             <li class="breadcrumb-item active">Ver</li>
                         </ol>
                     </div>
@@ -57,19 +57,19 @@ $pluralModel = $nameModel . 's';
                         <!-- Horizontal Form -->
                         <div class="card card-green">
                             <?php if (!empty($_GET["id"]) && isset($_GET["id"])) {
-                                $DataInsumos = InsumosController::searchForID(["id" => $_GET["id"]]);
-                                /* @var $DataInsumos Insumos */
-                                if (!empty($DataInsumos)) {
+                                $DataEmpresa = EmpresasController::searchForID(["id" => $_GET["id"]]);
+                                /* @var $DataEmpresa Empresa */
+                                if (!empty($DataEmpresa)) {
                                     ?>
                                     <div class="card-header">
                                         <h3 class="card-title"><i class="fas fa-info"></i> &nbsp; Ver Información
-                                            de <?= $DataInsumos->getNombre() ?></h3>
+                                            de <?= $DataEmpresa->getNombre() ?></h3>
                                         <div class="card-tools">
                                             <button type="button" class="btn btn-tool" data-card-widget="card-refresh"
                                                     data-source="show.php" data-source-selector="#card-refresh-content"
                                                     data-load-on-init="false"><i class="fas fa-sync-alt"></i></button>
                                             <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
-                                                        class="fas fa-expand"></i></button>
+                                                    class="fas fa-expand"></i></button>
                                             <button type="button" class="btn btn-tool" data-card-widget="collapse"
                                                     data-toggle="tooltip" title="Collapse">
                                                 <i class="fas fa-minus"></i></button>
@@ -83,65 +83,36 @@ $pluralModel = $nameModel . 's';
                                             <div class="col-sm-10">
                                                 <p>
                                                     <strong><i class="fas fa-book mr-1"></i> Nombre y
-                                                        cantidad</strong>
+                                                        telefono</strong>
                                                 <p class="text-muted">
-                                                    <?= $DataInsumos->getNombre() . " " . $DataInsumos->getCantidad() ?>
+                                                    <?= $DataEmpresa->getNombre() . " " . $DataEmpresa->gettelefono() ?>
                                                 </p>
                                                 <hr>
-<<<<<<< HEAD:views/Modules/usuarios/show.php
-                                                <strong><i class="fas fa-user mr-1"></i> Documento</strong>
-                                                <p class="text-muted"><?= $DataUsuario->getTipoDocumento() . ": " . $DataUsuario->getDocumento() ?></p>
-                                                <hr>
+                                                <strong><i class="fas fa-user mr-1"></i> Direccion</strong>
+                                                <p class="text-muted"><?= $DataEmpresa->getdireccion() . ": " . $DataEmpresa->getdireccion() ?></p>
 
-                                                <strong><i class="fas fa-map-marker-alt mr-1"></i> Direccion</strong>
-                                                <p class="text-muted"><?= $DataUsuario->getDireccion() ?>
-                                                    , <?= $DataUsuario->getMunicipio()->getNombre() ?>
-                                                    - <?= $DataUsuario->getMunicipio()->getDepartamento()->getNombre() ?></p>
                                                 <hr>
-                                                <strong><i class="fas fa-calendar mr-1"></i> Fecha Nacimiento</strong>
-                                                <p class="text-muted"><?= $DataUsuario->getFechaNacimiento()->translatedFormat('l, j \\de F Y'); ?>
-                                                    &nbsp;
-                                                    🎉Tienes: <?= $DataUsuario->getFechaNacimiento()->diffInYears(); ?>
-                                                    Años🤡
-                                                </p>
-                                                <hr>
-                                                <strong><i class="fas fa-phone mr-1"></i> Telefono</strong>
-                                                <p class="text-muted"><?= $DataUsuario->getTelefono() ?></p>
-=======
-                                                <strong><i class="fas fa-user mr-1"></i> Presentasion</strong>
-                                                <p class="text-muted"><?= $DataInsumos->getPresentasion() . ": " . $DataInsumos->getPresentasion() ?></p>
-
-                                                 <hr>
-                                                    <strong><i class="fas fa-user mr-1"></i> Valor</strong>
-                                                <p class="text-muted"><?= $DataInsumos->getValor() . ": " . $DataInsumos->getValor() ?></p>
->>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf:views/Modules/insumos/show.php
+                                                <strong><i class="fas fa-user mr-1"></i> Valor</strong>
+                                                <p class="text-muted"><?= $DataEmpresa->getValor() . ": " . $DataEmpresa->getValor() ?></p>
                                                 <hr>
                                                 <strong><i class="fas fa-map-marker-alt mr-1"></i>Valor</strong>
-                                                <p class="text-muted"><?= $DataInsumos->getValor() ?>
-                                                    <hr>
-                                                    <strong><i class="fas fa-user mr-1"></i> empresa_id</strong>
-                                                <p class="text-muted"><?= $DataInsumos->getempresa_id() . ": " . $DataInsumos->getempresa_id() ?></p>
+                                                <p class="text-muted"><?= $DataEmpresa->getValor() ?>
                                                 <hr>
-                                                <strong><i class="fas fa-map-marker-alt mr-1"></i> empresa_id</strong>
-                                                <p class="text-muted"><?= $DataInsumos->getempresa_id() ?>
+
                                                 </p>
                                             </div>
-                                    </div>
+                                        </div>
                                     </div>
                                     <div class="card-footer">
                                         <div class="row">
                                             <div class="col-auto mr-auto">
-<<<<<<< HEAD:views/Modules/usuarios/show.php
-                                                <a role="button" href="index.php" class="btn btn-success float-right"
-=======
-                                                <a role="button" href="../../../../parqueadero/views/Modules/insumos/index.php" class="btn btn-success float-right"
->>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf:views/Modules/insumos/show.php
+                                                <a role="button" href="../../../../parqueadero/views/Modules/Empresa/index.php" class="btn btn-success float-right"
                                                    style="margin-right: 5px;">
                                                     <i class="fas fa-tasks"></i> Gestionar <?= $pluralModel ?>
                                                 </a>
                                             </div>
                                             <div class="col-auto">
-                                                <a role="button" href="edit.php?id=<?= $DataInsumos->getId(); ?>"
+                                                <a role="button" href="edit.php?id=<?= $DataEmpresa->getId(); ?>"
                                                    class="btn btn-primary float-right"
                                                    style="margin-right: 5px;">
                                                     <i class="fas fa-edit"></i> Editar <?= $nameModel ?>

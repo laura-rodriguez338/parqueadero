@@ -4,9 +4,16 @@ namespace App\Models;
 use App\Interfaces\Model;
 use Carbon\Carbon;
 use Exception;
+<<<<<<< HEAD
 use JsonSerializable;
 
 final class Municipios extends AbstractDBConnection implements Model, JsonSerializable
+=======
+use JetBrains\PhpStorm\ArrayShape;
+use JsonSerializable;
+
+final class Municipios extends AbstractDBConnection implements Model
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
 {
     private ?int $id;
     private string $nombre;
@@ -16,9 +23,14 @@ final class Municipios extends AbstractDBConnection implements Model, JsonSerial
     private Carbon $created_at;
     private Carbon $updated_at;
     private Carbon $deleted_at;
+<<<<<<< HEAD
 
     /* Relaciones */
     private ?Departamentos $departamento;
+=======
+    /* Objeto de la relacion */
+    private Departamentos $departamento;
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
 
     /**
      * Municipios constructor. Recibe un array asociativo
@@ -28,7 +40,11 @@ final class Municipios extends AbstractDBConnection implements Model, JsonSerial
     public function __construct(array $municipio = [])
     {
         parent::__construct();
+<<<<<<< HEAD
         $this->setId($municipio['id'] ?? NULL);
+=======
+        $this->setId($municipio['id'] ?? null);
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
         $this->setNombre($municipio['nombre'] ?? '');
         $this->setDepartamentoId($municipio['departamento_id'] ?? 0);
         $this->setAcortado($municipio['acortado'] ?? '');
@@ -40,7 +56,11 @@ final class Municipios extends AbstractDBConnection implements Model, JsonSerial
 
     public function __destruct()
     {
+<<<<<<< HEAD
         if($this->isConnected){
+=======
+        if ($this->isConnected()) {
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
             $this->Disconnect();
         }
     }
@@ -180,6 +200,7 @@ final class Municipios extends AbstractDBConnection implements Model, JsonSerial
     /**
      * Relacion con departamento
      *
+<<<<<<< HEAD
      * @return Departamentos
      */
     public function getDepartamento(): ?Departamentos
@@ -192,6 +213,19 @@ final class Municipios extends AbstractDBConnection implements Model, JsonSerial
     }
 
     static function search($query): ?array
+=======
+     * @return null|Departamentos
+     */
+    public function getDepartamento(): ?Departamentos
+    {
+        if (!empty($this->departamento_id)) {
+            $this->departamento = Departamentos::searchForId($this->departamento_id) ?? new Departamentos();
+        }
+        return $this->departamento;
+    }
+
+    public static function search($query): ?array
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
     {
         try {
             $arrMunicipios = array();
@@ -207,22 +241,36 @@ final class Municipios extends AbstractDBConnection implements Model, JsonSerial
             }
             return $arrMunicipios;
         } catch (Exception $e) {
+<<<<<<< HEAD
             GeneralFunctions::logFile('Exception',$e, 'error');
+=======
+            GeneralFunctions::logFile('Exception', $e);
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
         }
         return null;
     }
 
+<<<<<<< HEAD
     static function getAll(): array
     {
         return Municipios::search("SELECT * FROM parqueadero.municipios");
     }
 
     static function searchForId(int $id): ?object
+=======
+    public static function getAll(): array
+    {
+        return Municipios::search("SELECT * FROM weber.municipios");
+    }
+
+    public static function searchForId(int $id): ?Municipios
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
     {
         try {
             if ($id > 0) {
                 $tmpMun = new Municipios();
                 $tmpMun->Connect();
+<<<<<<< HEAD
                 $getrow = $tmpMun->getRow("SELECT * FROM parqueadero.municipios WHERE id =?", array($id));
                 $tmpMun->Disconnect();
                 return ($getrow) ? new Municipios($getrow) : null;
@@ -231,6 +279,16 @@ final class Municipios extends AbstractDBConnection implements Model, JsonSerial
             }
         } catch (Exception $e) {
             GeneralFunctions::logFile('Exception',$e, 'error');
+=======
+                $getrow = $tmpMun->getRow("SELECT * FROM municipios WHERE id =?", array($id));
+                $tmpMun->Disconnect();
+                return ($getrow) ? new Municipios($getrow) : null;
+            } else {
+                throw new Exception('Id de municipio Invalido');
+            }
+        } catch (Exception $e) {
+            GeneralFunctions::logFile('Exception', $e);
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
         }
         return null;
     }
@@ -240,7 +298,21 @@ final class Municipios extends AbstractDBConnection implements Model, JsonSerial
         return "Nombre: $this->nombre, Estado: $this->estado";
     }
 
+<<<<<<< HEAD
     public function jsonSerialize()
+=======
+    #[ArrayShape([
+        'id' => "int|null",
+        'nombre' => "string",
+        'departamento_id' => "array",
+        'acortado' => "string",
+        'estado' => "string",
+        'created_at' => "string",
+        'updated_at' => "string",
+        'deleted_at' => "string"
+    ])]
+    public function jsonSerialize(): array
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
     {
         return [
             'id' => $this->getId(),
@@ -254,8 +326,31 @@ final class Municipios extends AbstractDBConnection implements Model, JsonSerial
         ];
     }
 
+<<<<<<< HEAD
     protected function save(string $query): ?bool { return null; }
     function insert(){ }
     function update() { }
     function deleted() { }
 }
+=======
+    protected function save(string $query): ?bool
+    {
+        return null;
+    }
+
+    public function insert(): ?bool
+    {
+        return false;
+    }
+
+    public function update(): ?bool
+    {
+        return false;
+    }
+
+    public function deleted(): ?bool
+    {
+        return false;
+    }
+}
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf

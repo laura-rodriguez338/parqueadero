@@ -27,8 +27,10 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
     <?php require("../../partials/sliderbar_main_menu.php"); ?>
 
     <!-- Content Wrapper. Contains page content -->
+
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
+<<<<<<< HEAD:views/Modules/fotos/create.php
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
@@ -42,9 +44,22 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                             <li class="breadcrumb-item active">Crear</li>
                         </ol>
                     </div>
+=======
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Crear un Nuevo <?= $nameModel ?></h1>
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf:views/Modules/insumos/create.php
                 </div>
-            </div><!-- /.container-fluid -->
-        </section>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="<?= $baseURL; ?>/views"><?= $_ENV['ALIASE_SITE'] ?></a></li>
+                        <li class="breadcrumb-item"><a href="../../../../parqueadero.git/views/Modules/Insumos/index.php"><?= $pluralModel ?></a></li>
+                        <li class="breadcrumb-item active">Crear</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
 
         <!-- Main content -->
         <section class="content">
@@ -72,7 +87,12 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                             <div class="card-body">
                                 <form class="form-horizontal" enctype="multipart/form-data" method="post" id="frmCreate<?= $nameModel ?>"
                                       name="frmCreate<?= $nameModel ?>"
+<<<<<<< HEAD:views/Modules/fotos/create.php
                                       action="../../../app/Controllers/MainController.php?controller=<?= $pluralModel ?>&action=create">
+=======
+                                      action="../../../app/Controllers/MainController.php?controller=<?=  $pluralModel ?>&action=create">
+
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf:views/Modules/insumos/create.php
                                     <div class="row">
                                         <div class="col-sm-10">
                                             <div class="form-group row">
@@ -90,6 +110,7 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                                 </div>
                                             </div>
                                             <div class="form-group row">
+<<<<<<< HEAD:views/Modules/fotos/create.php
                                                 <label for="producto_id" class="col-sm-2 col-form-label">Producto</label>
                                                 <div class="col-sm-10">
                                                     <?= ProductosController::selectProducto(
@@ -102,6 +123,13 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                                         )
                                                     )
                                                     ?>
+=======
+                                                <label for="presentasion" class="col-sm-2 col-form-label">Presentasion</label>
+                                                <div class="col-sm-10">
+                                                    <input required type="text"  class="form-control"
+                                                           id="presentasion" name="presentasion" placeholder="Tipo de presentasion"
+                                                           value="<?= $frmSession['presentasion'] ?? '' ?>">
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf:views/Modules/insumos/create.php
                                                 </div>
                                             </div>
                                         </div>
@@ -121,9 +149,21 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                                     </div>
                                                 </div>
                                             </div>
+<<<<<<< HEAD:views/Modules/fotos/create.php
                                         </div>
                                     </div>
 
+=======
+                                            <div class="form-group row">
+                                                <label for="empresa_id" class="col-sm-2 col-form-label">empresa_id</label>
+                                                <div class="col-sm-10">
+                                                    <input required type="text" class="form-control" id="empresa_id"
+                                                           name="empresa_id" placeholder="Ingrese la empresa_id"
+                                                           value="<?= $frmSession['empresa_id'] ?? '' ?>">
+                                                </div>
+                                            </div>
+                                        </div>
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf:views/Modules/insumos/create.php
                                     <hr>
                                     <button type="submit" class="btn btn-info">Enviar</button>
                                     <a href="index.php" role="button" class="btn btn-default float-right">Cancelar</a>

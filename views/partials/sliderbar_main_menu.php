@@ -58,26 +58,71 @@
                         </li>
                     </ul>
                 </li>
+<<<<<<< HEAD
                 <li class="nav-item has-treeview <?= strpos($_SERVER['REQUEST_URI'],'vehiculos') ? 'menu-open' : '' ?>">
                     <a href="#" class="nav-link <?= strpos($_SERVER['REQUEST_URI'],'vehiculos') ? 'active' : '' ?>">
                         <i class="nav-icon fa fa-sitemap"></i>
                         <p>
                             Vehiculos
+=======
+                <li class="nav-item has-treeview <?= strpos($_SERVER['REQUEST_URI'],'empresa') ? 'menu-open' : '' ?>">
+                    <a href="#" class="nav-link <?= strpos($_SERVER['REQUEST_URI'],'empresa') ? 'active' : '' ?>">
+                        <i class=" fas fa-building"></i>
+                        <p>
+                            Empresas
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
+<<<<<<< HEAD
                             <a href="<?= $baseURL ?>/views/modules/vehiculos/index.php" class="nav-link">
+=======
+                            <a href="<?= $baseURL ?>/views/modules/empresa/index.php" class="nav-link">
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Gestionar</p>
                             </a>
                         </li>
                         <li class="nav-item">
+<<<<<<< HEAD
                             <a href="<?= $baseURL ?>/views/modules/vehiculos/create.php" class="nav-link">
+=======
+                            <a href="<?= $baseURL ?>/views/modules/empresa/create.php" class="nav-link">
+>>>>>>> 0c40e7b3629895ede8d1c65d47ee0b45d2dd63cf
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Registrar</p>
                             </a>
+
+                        </li>
+
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview <?= strpos($_SERVER['REQUEST_URI'],'insumos') ? 'menu-open' : '' ?>">
+                    <a href="#" class="nav-link <?= strpos($_SERVER['REQUEST_URI'],'insumos') ? 'active' : '' ?>">
+                        <i class=" fas fa-archive"></i>
+                        <p>
+                            Insumos
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="<?= $baseURL ?>/views/modules/insumos/index.php" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Gestionar</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= $baseURL ?>/views/modules/insumos/create.php" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Registrar</p>
+                            </a>
+
+                        </li>
+
                         </li>
                     </ul>
                 </li>

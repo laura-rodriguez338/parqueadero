@@ -23,25 +23,24 @@
   "author": "Laura Rodríguez",
   "contributors": [
     {
-      "name" : "jesus olaya",
-      "email" : "jaolaya923@misena.edu.co",
-      "url" : "https://github.com/daom89"
+      "name": "jesus olaya",
+      "email": "jaolaya923@misena.edu.co",
+      "url": "https://github.com/daom89"
     },
     {
-      "name" : "yovani chaparro",
-      "email" : "ychaparro12@misena.edu.co",
-      "url" : "https://github.com/yovani345"
-    },
-
-    {
-      "name" : "catalina rodriguez",
-      "email" : "icrodriguez904@misena.edu.co",
-      "url" : "https://github.com/catakalina"
+      "name": "yovani chaparro",
+      "email": "ychaparro12@misena.edu.co",
+      "url": "https://github.com/yovani345"
     },
     {
-      "name" : "juan garcia",
-      "email" : "jfgarcia1869@misena.edu.co",
-      "url" : "https://github.com/daom89"
+      "name": "catalina rodriguez",
+      "email": "icrodriguez904@misena.edu.co",
+      "url": "https://github.com/catakalina"
+    },
+    {
+      "name": "juan garcia",
+      "email": "jfgarcia1869@misena.edu.co",
+      "url": "https://github.com/daom89"
     }
   ],
   "license": "ISC",

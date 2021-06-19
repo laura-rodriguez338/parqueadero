@@ -907,3 +907,2518 @@
 
 )
   
+[2021-06-16T17:05:51.724039+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
+[2021-06-17T01:27:14.043130+00:00] General.ERROR: Exception  
+[2021-06-17T01:27:14.058159+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-17T01:27:14.058591+00:00] General.ERROR: Line: 101  
+[2021-06-17T01:27:14.058771+00:00] General.ERROR: Mensaje: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'parqueadero.productos' doesn't exist  
+[2021-06-17T01:27:14.058937+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 101
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 386
+            [function] => getRows
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => SELECT * FROM productos WHERE estado = 'Activo' and stock > 0
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 129
+            [function] => search
+            [class] => App\Models\Productos
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => SELECT * FROM productos WHERE estado = 'Activo' and stock > 0
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\views\Modules\ventas\create.php
+            [line] => 268
+            [function] => selectProducto
+            [class] => App\Controllers\ProductosController
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => producto_id
+                            [name] => producto_id
+                            [defaultValue] => 
+                            [class] => form-control select2bs4 select2-info
+                            [where] => estado = 'Activo' and stock > 0
+                            [isMultiple] => 
+                            [isRequired] => 1
+                            [arrExcluir] => Array
+                                (
+                                )
+
+                            [request] => html
+                        )
+
+                )
+
+        )
+
+)
+  
+[2021-06-17T02:17:29.711143+00:00] General.ERROR: Exception  
+[2021-06-17T02:17:29.722117+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-17T02:17:29.722671+00:00] General.ERROR: Line: 101  
+[2021-06-17T02:17:29.724056+00:00] General.ERROR: Mensaje: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'parqueadero.productos' doesn't exist  
+[2021-06-17T02:17:29.724543+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 101
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 386
+            [function] => getRows
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => SELECT * FROM productos WHERE estado = 'Activo' and stock > 0
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 129
+            [function] => search
+            [class] => App\Models\Productos
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => SELECT * FROM productos WHERE estado = 'Activo' and stock > 0
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\views\Modules\ventas\create.php
+            [line] => 268
+            [function] => selectProducto
+            [class] => App\Controllers\ProductosController
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => producto_id
+                            [name] => producto_id
+                            [defaultValue] => 
+                            [class] => form-control select2bs4 select2-info
+                            [where] => estado = 'Activo' and stock > 0
+                            [isMultiple] => 
+                            [isRequired] => 1
+                            [arrExcluir] => Array
+                                (
+                                )
+
+                            [request] => html
+                        )
+
+                )
+
+        )
+
+)
+  
+[2021-06-17T02:17:34.162825+00:00] General.ERROR: Exception  
+[2021-06-17T02:17:34.163318+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-17T02:17:34.163456+00:00] General.ERROR: Line: 101  
+[2021-06-17T02:17:34.163557+00:00] General.ERROR: Mensaje: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'parqueadero.productos' doesn't exist  
+[2021-06-17T02:17:34.163663+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 101
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 386
+            [function] => getRows
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => SELECT * FROM productos WHERE estado = 'Activo'
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 129
+            [function] => search
+            [class] => App\Models\Productos
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => SELECT * FROM productos WHERE estado = 'Activo'
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\views\Modules\fotos\create.php
+            [line] => 101
+            [function] => selectProducto
+            [class] => App\Controllers\ProductosController
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => producto_id
+                            [name] => producto_id
+                            [defaultValue] => 
+                            [class] => form-control select2bs4 select2-info
+                            [where] => estado = 'Activo'
+                            [isMultiple] => 
+                            [isRequired] => 1
+                            [arrExcluir] => Array
+                                (
+                                )
+
+                            [request] => html
+                        )
+
+                )
+
+        )
+
+)
+  
+[2021-06-17T02:17:46.872738+00:00] General.ERROR: Exception  
+[2021-06-17T02:17:46.873328+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-17T02:17:46.873988+00:00] General.ERROR: Line: 101  
+[2021-06-17T02:17:46.874388+00:00] General.ERROR: Mensaje: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'parqueadero.productos' doesn't exist  
+[2021-06-17T02:17:46.874598+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 101
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 386
+            [function] => getRows
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => SELECT * FROM productos WHERE estado = 'Activo'
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 129
+            [function] => search
+            [class] => App\Models\Productos
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => SELECT * FROM productos WHERE estado = 'Activo'
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\views\Modules\fotos\create.php
+            [line] => 101
+            [function] => selectProducto
+            [class] => App\Controllers\ProductosController
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => producto_id
+                            [name] => producto_id
+                            [defaultValue] => 
+                            [class] => form-control select2bs4 select2-info
+                            [where] => estado = 'Activo'
+                            [isMultiple] => 
+                            [isRequired] => 1
+                            [arrExcluir] => Array
+                                (
+                                )
+
+                            [request] => html
+                        )
+
+                )
+
+        )
+
+)
+  
+[2021-06-17T02:17:55.780728+00:00] General.ERROR: Exception  
+[2021-06-17T02:17:55.781145+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-17T02:17:55.781261+00:00] General.ERROR: Line: 101  
+[2021-06-17T02:17:55.781349+00:00] General.ERROR: Mensaje: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'parqueadero.productos' doesn't exist  
+[2021-06-17T02:17:55.781443+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 101
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 386
+            [function] => getRows
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => SELECT * FROM productos WHERE estado = 'Activo'
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 129
+            [function] => search
+            [class] => App\Models\Productos
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => SELECT * FROM productos WHERE estado = 'Activo'
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\views\Modules\fotos\create.php
+            [line] => 101
+            [function] => selectProducto
+            [class] => App\Controllers\ProductosController
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => producto_id
+                            [name] => producto_id
+                            [defaultValue] => 
+                            [class] => form-control select2bs4 select2-info
+                            [where] => estado = 'Activo'
+                            [isMultiple] => 
+                            [isRequired] => 1
+                            [arrExcluir] => Array
+                                (
+                                )
+
+                            [request] => html
+                        )
+
+                )
+
+        )
+
+)
+  
+[2021-06-17T03:50:02.103591+00:00] General.ERROR: Exception  
+[2021-06-17T03:50:02.122323+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-17T03:50:02.122706+00:00] General.ERROR: Line: 101  
+[2021-06-17T03:50:02.122993+00:00] General.ERROR: Mensaje: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'parqueadero.insumos' doesn't exist  
+[2021-06-17T03:50:02.123309+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 101
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 213
+            [function] => getRows
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => SELECT * FROM parqueadero.insumos
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 257
+            [function] => search
+            [class] => App\Models\Insumos
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => SELECT * FROM parqueadero.insumos
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\InsumosController.php
+            [line] => 69
+            [function] => getAll
+            [class] => App\Models\Insumos
+            [type] => ::
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\views\Modules\vehiculos\index.php
+            [line] => 100
+            [function] => getAll
+            [class] => App\Controllers\InsumosController
+            [type] => ::
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-17T03:50:07.824938+00:00] General.ERROR: Exception  
+[2021-06-17T03:50:07.825640+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-17T03:50:07.825829+00:00] General.ERROR: Line: 101  
+[2021-06-17T03:50:07.825998+00:00] General.ERROR: Mensaje: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'parqueadero.insumos' doesn't exist  
+[2021-06-17T03:50:07.826172+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 101
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 213
+            [function] => getRows
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => SELECT * FROM parqueadero.insumos
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 257
+            [function] => search
+            [class] => App\Models\Insumos
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => SELECT * FROM parqueadero.insumos
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\InsumosController.php
+            [line] => 69
+            [function] => getAll
+            [class] => App\Models\Insumos
+            [type] => ::
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\views\Modules\vehiculos\index.php
+            [line] => 100
+            [function] => getAll
+            [class] => App\Controllers\InsumosController
+            [type] => ::
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-17T03:50:09.335347+00:00] General.ERROR: Exception  
+[2021-06-17T03:50:09.335752+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-17T03:50:09.335865+00:00] General.ERROR: Line: 101  
+[2021-06-17T03:50:09.335950+00:00] General.ERROR: Mensaje: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'parqueadero.insumos' doesn't exist  
+[2021-06-17T03:50:09.336040+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 101
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 213
+            [function] => getRows
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => SELECT * FROM parqueadero.insumos
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Insumos.php
+            [line] => 257
+            [function] => search
+            [class] => App\Models\Insumos
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => SELECT * FROM parqueadero.insumos
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\InsumosController.php
+            [line] => 69
+            [function] => getAll
+            [class] => App\Models\Insumos
+            [type] => ::
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\views\Modules\vehiculos\index.php
+            [line] => 100
+            [function] => getAll
+            [class] => App\Controllers\InsumosController
+            [type] => ::
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-17T04:30:53.996145+00:00] General.ERROR: Exception  
+[2021-06-17T04:30:53.997886+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-17T04:30:53.998217+00:00] General.ERROR: Line: 127  
+[2021-06-17T04:30:53.998505+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id' cannot be null  
+[2021-06-17T04:30:53.998806+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Vehiculos.php
+            [line] => 166
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.vehiculos VALUES (:id,:nombre,:descripcion,:estado,:created_at,:updated_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => Carro
+                            [:descripcion] => toyota
+                            [:estado] => Activo
+                            [:created_at] => 2021-06-17 04:30:53
+                            [:updated_at] => 2021-06-17 04:30:53
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Vehiculos.php
+            [line] => 177
+            [function] => save
+            [class] => App\Models\Vehiculos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.vehiculos VALUES (:id,:nombre,:descripcion,:estado,:created_at,:updated_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\VehiculosController.php
+            [line] => 27
+            [function] => insert
+            [class] => App\Models\Vehiculos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\VehiculosController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-18T01:59:53.251533+00:00] General.ERROR: Exception  
+[2021-06-18T01:59:53.275882+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-18T01:59:53.277207+00:00] General.ERROR: Line: 127  
+[2021-06-18T01:59:53.277837+00:00] General.ERROR: Mensaje: SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'stock' at row 1  
+[2021-06-18T01:59:53.278992+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 391
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => Parqueo
+                            [:precio] => 1200
+                            [:porcentaje_ganancia] => 10
+                            [:stock] => 10000000
+                            [:placa_id] => 0
+                            [:marca_id] => 1
+                            [:colores_id] => 0
+                            [:vehiculo_id] => 0
+                            [:estado] => Activo
+                            [:created_at] => 2021-06-18 01:59:51
+                            [:updated_at] => 2021-06-18 01:59:51
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 403
+            [function] => save
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 33
+            [function] => insert
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\ProductosController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-18T02:17:44.812341+00:00] General.ERROR: Exception  
+[2021-06-18T02:17:44.813019+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-18T02:17:44.813150+00:00] General.ERROR: Line: 127  
+[2021-06-18T02:17:44.813239+00:00] General.ERROR: Mensaje: SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'stock' at row 1  
+[2021-06-18T02:17:44.813342+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 391
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => Parqueo
+                            [:precio] => 1200
+                            [:porcentaje_ganancia] => 10
+                            [:stock] => 10000000
+                            [:placa_id] => 0
+                            [:marca_id] => 1
+                            [:colores_id] => 0
+                            [:vehiculo_id] => 0
+                            [:estado] => Activo
+                            [:created_at] => 2021-06-18 02:17:44
+                            [:updated_at] => 2021-06-18 02:17:44
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 403
+            [function] => save
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 33
+            [function] => insert
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\ProductosController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-18T02:18:58.130664+00:00] General.ERROR: Exception  
+[2021-06-18T02:18:58.131766+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-18T02:18:58.131978+00:00] General.ERROR: Line: 127  
+[2021-06-18T02:18:58.132158+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`productos`, CONSTRAINT `fk_productos_placas1` FOREIGN KEY (`placa_id`) REFERENCES `placas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-18T02:18:58.132370+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 391
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => Parqueo
+                            [:precio] => 1200
+                            [:porcentaje_ganancia] => 10
+                            [:stock] => 1000000
+                            [:placa_id] => 0
+                            [:marca_id] => 1
+                            [:colores_id] => 0
+                            [:vehiculo_id] => 0
+                            [:estado] => Activo
+                            [:created_at] => 2021-06-18 02:18:57
+                            [:updated_at] => 2021-06-18 02:18:57
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 403
+            [function] => save
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 33
+            [function] => insert
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\ProductosController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-18T02:19:08.657557+00:00] General.ERROR: Exception  
+[2021-06-18T02:19:08.658030+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-18T02:19:08.658180+00:00] General.ERROR: Line: 127  
+[2021-06-18T02:19:08.658287+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`productos`, CONSTRAINT `fk_productos_placas1` FOREIGN KEY (`placa_id`) REFERENCES `placas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-18T02:19:08.658458+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 391
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => Parqueo
+                            [:precio] => 1200
+                            [:porcentaje_ganancia] => 10
+                            [:stock] => 1000
+                            [:placa_id] => 0
+                            [:marca_id] => 1
+                            [:colores_id] => 0
+                            [:vehiculo_id] => 0
+                            [:estado] => Activo
+                            [:created_at] => 2021-06-18 02:19:08
+                            [:updated_at] => 2021-06-18 02:19:08
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 403
+            [function] => save
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 33
+            [function] => insert
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\ProductosController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-18T02:19:17.523042+00:00] General.ERROR: Exception  
+[2021-06-18T02:19:17.523464+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-18T02:19:17.523583+00:00] General.ERROR: Line: 127  
+[2021-06-18T02:19:17.523699+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`productos`, CONSTRAINT `fk_productos_placas1` FOREIGN KEY (`placa_id`) REFERENCES `placas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-18T02:19:17.523803+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 391
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => Parqueo
+                            [:precio] => 1200
+                            [:porcentaje_ganancia] => 10
+                            [:stock] => 100
+                            [:placa_id] => 0
+                            [:marca_id] => 1
+                            [:colores_id] => 0
+                            [:vehiculo_id] => 0
+                            [:estado] => Activo
+                            [:created_at] => 2021-06-18 02:19:17
+                            [:updated_at] => 2021-06-18 02:19:17
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 403
+            [function] => save
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 33
+            [function] => insert
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\ProductosController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-18T02:19:38.641699+00:00] General.ERROR: Exception  
+[2021-06-18T02:19:38.642979+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-18T02:19:38.643388+00:00] General.ERROR: Line: 127  
+[2021-06-18T02:19:38.643686+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`productos`, CONSTRAINT `fk_productos_placas1` FOREIGN KEY (`placa_id`) REFERENCES `placas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-18T02:19:38.644017+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 391
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => Parqueo
+                            [:precio] => 1200
+                            [:porcentaje_ganancia] => 10
+                            [:stock] => 100
+                            [:placa_id] => 0
+                            [:marca_id] => 1
+                            [:colores_id] => 0
+                            [:vehiculo_id] => 0
+                            [:estado] => Activo
+                            [:created_at] => 2021-06-18 02:19:38
+                            [:updated_at] => 2021-06-18 02:19:38
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 403
+            [function] => save
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 33
+            [function] => insert
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\ProductosController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-18T02:21:58.667155+00:00] General.ERROR: Exception  
+[2021-06-18T02:21:58.667746+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-18T02:21:58.667864+00:00] General.ERROR: Line: 127  
+[2021-06-18T02:21:58.667953+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`productos`, CONSTRAINT `fk_productos_placas1` FOREIGN KEY (`placa_id`) REFERENCES `placas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-18T02:21:58.668061+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 391
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => Parqueo
+                            [:precio] => 1200
+                            [:porcentaje_ganancia] => 10
+                            [:stock] => 100
+                            [:placa_id] => 0
+                            [:marca_id] => 1
+                            [:colores_id] => 0
+                            [:vehiculo_id] => 0
+                            [:estado] => Activo
+                            [:created_at] => 2021-06-18 02:21:58
+                            [:updated_at] => 2021-06-18 02:21:58
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 403
+            [function] => save
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 33
+            [function] => insert
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\ProductosController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-18T02:35:28.067472+00:00] General.ERROR: Exception  
+[2021-06-18T02:35:28.069046+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-18T02:35:28.069358+00:00] General.ERROR: Line: 127  
+[2021-06-18T02:35:28.069619+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`productos`, CONSTRAINT `fk_productos_placas1` FOREIGN KEY (`placa_id`) REFERENCES `placas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-18T02:35:28.069913+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 391
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => UPDATE parqueadero.productos SET 
+            nombre = :nombre, precio = :precio, porcentaje_ganancia = :porcentaje_ganancia, 
+            stock = :stock, placa_id = :placa_id, marca_id = :marca_id, colores_id = :colores_id, vehiculo_id = :vehiculo_id, estado = :estado, created_at = :created_at, 
+            updated_at = :updated_at WHERE id = :id
+                    [1] => Array
+                        (
+                            [:id] => 1
+                            [:nombre] => Parqueo
+                            [:precio] => 30000
+                            [:porcentaje_ganancia] => 10
+                            [:stock] => 100000
+                            [:placa_id] => 0
+                            [:marca_id] => 1
+                            [:colores_id] => 0
+                            [:vehiculo_id] => 0
+                            [:estado] => Activo
+                            [:created_at] => 2021-06-18 02:35:27
+                            [:updated_at] => 2021-06-18 02:35:27
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 415
+            [function] => save
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => UPDATE parqueadero.productos SET 
+            nombre = :nombre, precio = :precio, porcentaje_ganancia = :porcentaje_ganancia, 
+            stock = :stock, placa_id = :placa_id, marca_id = :marca_id, colores_id = :colores_id, vehiculo_id = :vehiculo_id, estado = :estado, created_at = :created_at, 
+            updated_at = :updated_at WHERE id = :id
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 49
+            [function] => update
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => edit
+            [class] => App\Controllers\ProductosController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-18T16:37:56.621546+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
+[2021-06-18T16:38:38.523778+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
+[2021-06-18T23:06:09.641220+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
+[2021-06-18T23:06:47.418659+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
+[2021-06-19T00:33:30.375320+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
+[2021-06-19T00:34:07.955592+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
+[2021-06-19T00:55:33.932192+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
+[2021-06-19T00:57:26.577399+00:00] General.ERROR: Exception  
+[2021-06-19T00:57:26.601491+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-19T00:57:26.601749+00:00] General.ERROR: Line: 127  
+[2021-06-19T00:57:26.601888+00:00] General.ERROR: Mensaje: SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'stock' at row 1  
+[2021-06-19T00:57:26.602008+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 391
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => Lavado
+                            [:precio] => 15000
+                            [:porcentaje_ganancia] => 10
+                            [:stock] => 10000000
+                            [:placa_id] => 2
+                            [:marca_id] => 2
+                            [:colores_id] => 2
+                            [:vehiculo_id] => 2
+                            [:estado] => Activo
+                            [:created_at] => 2021-06-19 00:57:26
+                            [:updated_at] => 2021-06-19 00:57:26
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 403
+            [function] => save
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 33
+            [function] => insert
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\ProductosController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-19T01:20:31.309388+00:00] General.ERROR: Exception  
+[2021-06-19T01:20:31.310315+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-19T01:20:31.310476+00:00] General.ERROR: Line: 43  
+[2021-06-19T01:20:31.310596+00:00] General.ERROR: Mensaje: SQLSTATE[HY000] [1045] Access denied for user 'parqueadero'@'localhost' (using password: YES)  
+[2021-06-19T01:20:31.310732+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 43
+            [function] => __construct
+            [class] => PDO
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => mysql:host=127.0.0.1;port=3306;dbname=parqueadero;charset=utf8
+                    [1] => parqueadero
+                    [2] => parqueo65889
+                    [3] => Array
+                        (
+                            [1002] => SET NAMES utf8
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Usuarios.php
+            [line] => 436
+            [function] => Connect
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Usuarios.php
+            [line] => 520
+            [function] => search
+            [class] => App\Models\Usuarios
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => SELECT * FROM usuarios WHERE user = 'parqueadero'
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\UsuariosController.php
+            [line] => 187
+            [function] => Login
+            [class] => App\Models\Usuarios
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => parqueadero
+                    [1] => 1234
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => login
+            [class] => App\Controllers\UsuariosController
+            [type] => ::
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-19T01:26:39.142092+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
+[2021-06-19T01:27:49.008581+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
+[2021-06-19T01:30:59.282489+00:00] General.ERROR: Exception  
+[2021-06-19T01:30:59.283203+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-19T01:30:59.283312+00:00] General.ERROR: Line: 127  
+[2021-06-19T01:30:59.283452+00:00] General.ERROR: Mensaje: SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'stock' at row 1  
+[2021-06-19T01:30:59.283559+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 391
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => Detergente
+                            [:precio] => 14
+                            [:porcentaje_ganancia] => 10
+                            [:stock] => 28474566
+                            [:placa_id] => 1
+                            [:marca_id] => 1
+                            [:colores_id] => 1
+                            [:vehiculo_id] => 1
+                            [:estado] => Activo
+                            [:created_at] => 2021-06-19 01:30:59
+                            [:updated_at] => 2021-06-19 01:30:59
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 403
+            [function] => save
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 33
+            [function] => insert
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\ProductosController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-19T01:31:22.249119+00:00] General.ERROR: Exception  
+[2021-06-19T01:31:22.249708+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-19T01:31:22.249859+00:00] General.ERROR: Line: 127  
+[2021-06-19T01:31:22.249973+00:00] General.ERROR: Mensaje: SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'stock' at row 1  
+[2021-06-19T01:31:22.250169+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 391
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:nombre] => Carro
+                            [:precio] => 14
+                            [:porcentaje_ganancia] => 10
+                            [:stock] => 28474566
+                            [:placa_id] => 1
+                            [:marca_id] => 1
+                            [:colores_id] => 1
+                            [:vehiculo_id] => 1
+                            [:estado] => Activo
+                            [:created_at] => 2021-06-19 01:31:22
+                            [:updated_at] => 2021-06-19 01:31:22
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\Productos.php
+            [line] => 403
+            [function] => save
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.productos VALUES (:id,:nombre,:precio,:porcentaje_ganancia,:stock,:placa_id,:marca_id,:colores_id,:vehiculo_id,:estado,:created_at,:updated_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\ProductosController.php
+            [line] => 33
+            [function] => insert
+            [class] => App\Models\Productos
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\ProductosController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-19T01:34:20.292580+00:00] General.ERROR: Exception  
+[2021-06-19T01:34:20.293235+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-19T01:34:20.293343+00:00] General.ERROR: Line: 127  
+[2021-06-19T01:34:20.293430+00:00] General.ERROR: Mensaje: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1  
+[2021-06-19T01:34:20.293530+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 190
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:venta_id] => 1
+                            [:producto_id] => 1
+                            [:cantidad] => 15
+                            [:precio_venta] => 15.4
+                            [:created_at] => 2021-06-19 01:34:20
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 198
+            [function] => save
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
+            [line] => 32
+            [function] => insert
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\DetalleVentasController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-19T01:34:54.466743+00:00] General.ERROR: Exception  
+[2021-06-19T01:34:54.467302+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-19T01:34:54.467483+00:00] General.ERROR: Line: 127  
+[2021-06-19T01:34:54.467578+00:00] General.ERROR: Mensaje: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1  
+[2021-06-19T01:34:54.467682+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 190
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:venta_id] => 1
+                            [:producto_id] => 2
+                            [:cantidad] => 14
+                            [:precio_venta] => 13.8
+                            [:created_at] => 2021-06-19 01:34:54
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 198
+            [function] => save
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
+            [line] => 32
+            [function] => insert
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\DetalleVentasController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-19T01:36:31.290089+00:00] General.ERROR: Exception  
+[2021-06-19T01:36:31.290691+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-19T01:36:31.290800+00:00] General.ERROR: Line: 127  
+[2021-06-19T01:36:31.290896+00:00] General.ERROR: Mensaje: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1  
+[2021-06-19T01:36:31.291007+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 190
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:venta_id] => 1
+                            [:producto_id] => 2
+                            [:cantidad] => 2
+                            [:precio_venta] => 13.8
+                            [:created_at] => 2021-06-19 01:36:31
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 198
+            [function] => save
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
+            [line] => 32
+            [function] => insert
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\DetalleVentasController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-19T01:36:47.394947+00:00] General.ERROR: Exception  
+[2021-06-19T01:36:47.395575+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-19T01:36:47.395675+00:00] General.ERROR: Line: 127  
+[2021-06-19T01:36:47.395759+00:00] General.ERROR: Mensaje: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1  
+[2021-06-19T01:36:47.395860+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 190
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:venta_id] => 1
+                            [:producto_id] => 1
+                            [:cantidad] => 3
+                            [:precio_venta] => 15.4
+                            [:created_at] => 2021-06-19 01:36:47
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 198
+            [function] => save
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
+            [line] => 32
+            [function] => insert
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\DetalleVentasController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-19T01:41:14.740258+00:00] General.ERROR: Exception  
+[2021-06-19T01:41:14.741181+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-19T01:41:14.741414+00:00] General.ERROR: Line: 127  
+[2021-06-19T01:41:14.741512+00:00] General.ERROR: Mensaje: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1  
+[2021-06-19T01:41:14.741634+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 190
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:venta_id] => 2
+                            [:producto_id] => 3
+                            [:cantidad] => 2
+                            [:precio_venta] => 11000
+                            [:created_at] => 2021-06-19 01:41:14
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 198
+            [function] => save
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
+            [line] => 32
+            [function] => insert
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\DetalleVentasController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-19T01:45:09.997276+00:00] General.ERROR: Exception  
+[2021-06-19T01:45:09.997897+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-19T01:45:09.998003+00:00] General.ERROR: Line: 127  
+[2021-06-19T01:45:09.998094+00:00] General.ERROR: Mensaje: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1  
+[2021-06-19T01:45:09.998220+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 190
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:venta_id] => 2
+                            [:producto_id] => 1
+                            [:cantidad] => 1
+                            [:precio_venta] => 15.4
+                            [:created_at] => 2021-06-19 01:45:09
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 198
+            [function] => save
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
+            [line] => 32
+            [function] => insert
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\DetalleVentasController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-19T01:46:29.944399+00:00] General.ERROR: Exception  
+[2021-06-19T01:46:29.944867+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-19T01:46:29.944975+00:00] General.ERROR: Line: 127  
+[2021-06-19T01:46:29.945070+00:00] General.ERROR: Mensaje: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1  
+[2021-06-19T01:46:29.945182+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 190
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:venta_id] => 3
+                            [:producto_id] => 3
+                            [:cantidad] => 1
+                            [:precio_venta] => 11000
+                            [:created_at] => 2021-06-19 01:46:29
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 198
+            [function] => save
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
+            [line] => 32
+            [function] => insert
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\DetalleVentasController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-19T01:50:46.734123+00:00] General.ERROR: Exception  
+[2021-06-19T01:50:46.735159+00:00] General.ERROR: Archivo: C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php  
+[2021-06-19T01:50:46.735323+00:00] General.ERROR: Line: 127  
+[2021-06-19T01:50:46.735427+00:00] General.ERROR: Mensaje: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`parqueadero`.`detalle_ventas`, CONSTRAINT `fk_detalle_ventas_ventas1` FOREIGN KEY (`venta_id`) REFERENCES `ventas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)  
+[2021-06-19T01:50:46.735547+00:00] General.ERROR: Array
+(
+    [0] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\AbstractDBConnection.php
+            [line] => 127
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 190
+            [function] => insertRow
+            [class] => App\Models\AbstractDBConnection
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                    [1] => Array
+                        (
+                            [:id] => 
+                            [:venta_id] => 3
+                            [:producto_id] => 3
+                            [:cantidad] => 1
+                            [:precio_venta] => 11000
+                            [:created_at] => 2021-06-19 01:50:46
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\Models\DetalleVentas.php
+            [line] => 198
+            [function] => save
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => INSERT INTO parqueadero.detalle_ventas VALUES (:id,:venta_id,:producto_id,:cantidad,:precio_venta,:created_at)
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\DetalleVentasController.php
+            [line] => 32
+            [function] => insert
+            [class] => App\Models\DetalleVentas
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\laragon\www\parqueadero.git\app\controllers\MainController.php
+            [line] => 29
+            [function] => create
+            [class] => App\Controllers\DetalleVentasController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+  
+[2021-06-19T01:54:38.174142+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 
+[2021-06-19T01:55:22.911838+00:00] General.ERROR: Archivo No Subido {"descripcion":"Error en la carpeta..","0":"File upload error (no file was uploaded)."} 

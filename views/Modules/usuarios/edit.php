@@ -40,8 +40,8 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? null;
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="<?= $baseURL; ?>/views"><?= $_ENV['ALIASE_SITE'] ?></a></li>
-                            <li class="breadcrumb-item"><a href="../../../../parqueadero.git/views/Modules/insumos/index.php"><?= $pluralModel ?></a></li>
+                            <li class="breadcrumb-item"><a href="<?= $baseURL; ?>/views/"><?= $_ENV['ALIASE_SITE'] ?></a></li>
+                            <li class="breadcrumb-item"><a href="index.php"><?= $pluralModel ?></a></li>
                             <li class="breadcrumb-item active">Editar</li>
                         </ol>
                     </div>
@@ -66,9 +66,9 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? null;
                                             data-source="create.php" data-source-selector="#card-refresh-content"
                                             data-load-on-init="false"><i class="fas fa-sync-alt"></i></button>
                                     <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
-                                            class="fas fa-expand"></i></button>
+                                                class="fas fa-expand"></i></button>
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
-                                            class="fas fa-minus"></i></button>
+                                                class="fas fa-minus"></i></button>
                                 </div>
                             </div>
                             <!-- /.card-header -->
@@ -112,19 +112,19 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? null;
                                                             <select id="tipo_documento" name="tipo_documento"
                                                                     class="custom-select">
                                                                 <option <?= ($DataUsuario->getTipoDocumento() == "C.C") ? "selected" : ""; ?>
-                                                                    value="C.C">Cedula de Ciudadania
+                                                                        value="C.C">Cedula de Ciudadania
                                                                 </option>
                                                                 <option <?= ($DataUsuario->getTipoDocumento() == "T.I") ? "selected" : ""; ?>
-                                                                    value="T.I">Tarjeta de Identidad
+                                                                        value="T.I">Tarjeta de Identidad
                                                                 </option>
                                                                 <option <?= ($DataUsuario->getTipoDocumento() == "R.C") ? "selected" : ""; ?>
-                                                                    value="R.C">Registro Civil
+                                                                        value="R.C">Registro Civil
                                                                 </option>
                                                                 <option <?= ($DataUsuario->getTipoDocumento() == "Pasaporte") ? "selected" : ""; ?>
-                                                                    value="Pasaporte">Pasaporte
+                                                                        value="Pasaporte">Pasaporte
                                                                 </option>
                                                                 <option <?= ($DataUsuario->getTipoDocumento() == "C.E") ? "selected" : ""; ?>
-                                                                    value="C.E">Cedula de Extranjeria
+                                                                        value="C.E">Cedula de Extranjeria
                                                                 </option>
                                                             </select>
                                                         </div>
@@ -255,7 +255,7 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? null;
                                             </div>
                                             <hr>
                                             <button type="submit" class="btn btn-info">Enviar</button>
-                                            <a href="../../../../parqueadero.git/views/Modules/insumos/index.php" role="button" class="btn btn-default float-right">Cancelar</a>
+                                            <a href="index.php" role="button" class="btn btn-default float-right">Cancelar</a>
                                         </form>
                                     </div>
                                     <!-- /.card-body -->
@@ -311,4 +311,3 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? null;
 </script>
 </body>
 </html>
-

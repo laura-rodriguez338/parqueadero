@@ -1,43 +1,50 @@
 <?php
 
-
 namespace App\Models;
 
-require ("AbstractDBConnection.php");
-require (__DIR__.'\..\interfaces\Model.php');
-require(__DIR__ .'/../../vendor/autoload.php');
 use App\Interfaces\Model;
-use App\Models\AbstractDBConnection;
 use Carbon\Carbon;
+use Exception;
+use JsonSerializable;
 
-class Insumos extends AbstractDBConnection implements Model
+class Insumos extends AbstractDBConnection implements Model, JsonSerializable
 {
     private ?int $id;
     private string $nombre;
-    private string $cantidad;
-    private string $presentasion;
-    private int $valor;
-    private int $empresa_id;
-    public function __construct(array $insumos = [])
+    private string $descripcion;
+    private string $estado;
+    private Carbon $created_at;
+    private Carbon $updated_at;
+
+    /* Relaciones */
+    private ?array $productosInsumo;
+
+    /**
+     * Insumos constructor. Recibe un array asociativo
+     * @param array $insumo
+     */
+    public function __construct(array $insumo = [])
     {
         parent::__construct();
-        $this->setId($insumos['id'] ?? null);
-        $this->setNombre($insumos['nombre'] ?? '');
-        $this->setCantidad($insumos['cantidad'] ?? '');
-        $this->setPresentasion($insumos['presentasion'] ?? '');
-        $this->setValor($insumos['valor'] ?? 0);
-        $this->setempresa_id($insumos['empresa_id'] ?? 1);
+        $this->setId($insumo['id'] ?? NULL);
+        $this->setNombre($insumo['nombre'] ?? '');
+        $this->setDescripcion($insumo['descripcion'] ?? '');
+        $this->setEstado($insumo['estado'] ?? '');
+        $this->setCreatedAt(!empty($insumo['created_at']) ? Carbon::parse($insumo['created_at']) : new Carbon());
+        $this->setUpdatedAt(!empty($insumo['updated_at']) ? Carbon::parse($insumo['updated_at']) : new Carbon());
     }
-    public function __destruct()
+
+    function __destruct()
     {
-        if ($this->isConnected()) {
+        if($this->isConnected){
             $this->Disconnect();
         }
     }
+
     /**
      * @return int|null
      */
-    public function getId(): ?int
+    public function getId() : ?int
     {
         return $this->id;
     }
@@ -51,95 +58,109 @@ class Insumos extends AbstractDBConnection implements Model
     }
 
     /**
-     * @return string
+     * @return mixed|string
      */
-    public function getNombre(): string
+    public function getNombre() : string
     {
-        return $this->nombre;
+        return ucwords($this->nombre);
     }
 
     /**
-     * @param string $nombre
+     * @param mixed|string $nombre
      */
     public function setNombre(string $nombre): void
     {
-        $this->nombre = $nombre;
+        $this->nombre = trim(mb_strtolower($nombre, 'UTF-8'));
     }
 
     /**
-     * @return string
+     * @return string|mixed
      */
-    public function getCantidad(): string
+    public function getDescripcion() : string
     {
-        return $this->cantidad;
+        return $this->descripcion;
     }
 
     /**
-     * @param string $cantidad
+     * @param string|mixed $descripcion
      */
-    public function setCantidad(string $cantidad): void
+    public function setDescripcion(string $descripcion): void
     {
-        $this->cantidad = $cantidad;
+        $this->descripcion = $descripcion;
     }
 
     /**
-     * @return string
+     * @return mixed|string
      */
-    public function getPresentasion(): string
+    public function getEstado() : string
     {
-        return $this->presentasion;
+        return $this->estado;
     }
 
     /**
-     * @param string $presentasion
+     * @param mixed|string $estado
      */
-    public function setPresentasion(string $presentasion): void
+    public function setEstado(string $estado): void
     {
-        $this->presentasion = $presentasion;
+        $this->estado = $estado;
     }
 
     /**
-     * @return int
+     * @return Carbon
      */
-    public function getValor(): int
+    public function getCreatedAt(): Carbon
     {
-        return $this->valor;
+        return $this->created_at->locale('es');
     }
 
     /**
-     * @param int $valor
+     * @param Carbon $created_at
      */
-    public function setValor(int $valor): void
+    public function setCreatedAt(Carbon $created_at): void
     {
-        $this->valor = $valor;
-    }
-    /**
-     * @return int
-     */
-    public function getempresa_id(): int
-    {
-        return $this->empresa_id;
+        $this->created_at = $created_at->locale('es');
     }
 
     /**
-     * @param int $empresa_id
+     * @return Carbon
      */
-    public function setempresa_id(int $empresa_id): void
+    public function getUpdatedAt(): Carbon
     {
-        $this->empresa_id = $empresa_id;
+        return $this->updated_at->locale('es');
     }
 
+    /**
+     * @param Carbon $updated_at
+     */
+    public function setUpdatedAt(Carbon $updated_at): void
+    {
+        $this->updated_at = $updated_at;
+    }
 
+    /* Relaciones */
+    /**
+     * retorna un array de productos que pertenecen a un insumo
+     * @return array
+     */
+    public function getProductosInsumo(): ?array
+    {
+        $this->productosInsumo = Productos::search("SELECT * FROM parqueadero.productos WHERE insumo_id = ".$this->id." and estado = 'Activo'");
+        return $this->productosInsumo;
+    }
+
+    /**
+     * @param string $query
+     * @return bool|null
+     */
     protected function save(string $query): ?bool
     {
-
         $arrData = [
             ':id' =>    $this->getId(),
             ':nombre' =>   $this->getNombre(),
-            ':cantidad' =>   $this->getcantidad(),
-            ':presentasion' =>  $this->getpresentasion(),
-            ':valor' =>   $this->getvalor(),
-            ':empresa_id' =>   $this->getempresa_id(),
+            ':descripcion' =>   $this->getDescripcion(),
+            ':estado' =>   $this->getEstado(),
+            ':created_at' =>  $this->getCreatedAt()->toDateTimeString(), //YYYY-MM-DD HH:MM:SS
+            ':updated_at' =>  $this->getUpdatedAt()->toDateTimeString() //YYYY-MM-DD HH:MM:SS
         ];
         $this->Connect();
         $result = $this->insertRow($query, $arrData);
@@ -150,20 +171,9 @@ class Insumos extends AbstractDBConnection implements Model
     /**
      * @return bool|null
      */
-    public function insert(): ?bool
+    function insert(): ?bool
     {
-        $query = "INSERT INTO Insumos VALUES (
-            :id,:nombre,:cantidad,:presentasion,:valor,:empresa_id
-            
-        )";
-        if($this->save($query)){
-            $idInsumos = $this->getLastId("Insumos");
-            $this->setId($idInsumos);
-            return true;
-
-        }else{
-            return false;
-        }
+        $query = "INSERT INTO parqueadero.insumos VALUES (:id,:nombre,:descripcion,:estado,:created_at,:updated_at)";
         return $this->save($query);
     }
 
@@ -172,80 +182,121 @@ class Insumos extends AbstractDBConnection implements Model
      */
     public function update(): ?bool
     {
-        $query = "UPDATE Insumos SET 
-            nombre = :nombre, cantidad = :cantidad, presentasion = :presentasion, 
-            valor = :valor,empresa_id = :empresa_id WHERE id = :id";
+        $query = "UPDATE parqueadero.insumos SET 
+            nombre = :nombre, descripcion = :descripcion,
+            estado = :estado, created_at = :created_at, 
+            updated_at = :updated_at WHERE id = :id";
         return $this->save($query);
     }
 
-
-    function deleted()
+    /**
+     * @return bool
+     * @throws Exception
+     */
+    public function deleted(): bool
     {
-
+        $this->setEstado("Inactivo"); //Cambia el estado del Usuario
+        return $this->update();                    //Guarda los cambios..
     }
 
-    static function search($query): ?array
+    /**
+     * @param $query
+     * @return Insumos|array
+     * @throws Exception
+     */
+    public static function search($query) : ?array
     {
         try {
             $arrInsumos = array();
             $tmp = new Insumos();
-
             $tmp->Connect();
             $getrows = $tmp->getRows($query);
             $tmp->Disconnect();
 
-            if (!empty($getrows)) {
-                foreach ($getrows as $valor) {
-                    $Insumos = new insumos($valor);
-                    array_push($arrInsumos, $Insumos);
-                    unset($Insumos); //Borrar el contenido del objeto
-                }
-                return $arrInsumos;
+            foreach ($getrows as $valor) {
+                $Insumo = new Insumos($valor);
+                array_push($arrInsumos, $Insumo);
+                unset($Insumo);
             }
-            return null;
+            return $arrInsumos;
         } catch (Exception $e) {
-            GeneralFunctions::logFile('Exception', $e);
+            GeneralFunctions::logFile('Exception',$e, 'error');
         }
         return null;
     }
 
-
-    static function searchForId(int $id): ?Insumos
+    /**
+     * @param $id
+     * @return Insumos
+     * @throws Exception
+     */
+    public static function searchForId($id) : ?Insumos
     {
-        {
-            try {
-                if ($id > 0) {
-                    $tmpInsumos = new Insumos();
-                    $tmpInsumos->Connect();
-                    $getrow = $tmpInsumos->getRow("SELECT * FROM insumos WHERE id = ?", array($id) );
-
-                    $tmpInsumos->Disconnect();
-                    return ($getrow) ? new Insumos($getrow) : null;
-                } else {
-                    throw new Exception('Id de insumos Invalido');
-                }
-            } catch (Exception $e) {
-                GeneralFunctions::logFile('Exception', $e);
+        try {
+            if ($id > 0) {
+                $Insumo = new Insumos();
+                $Insumo->Connect();
+                $getrow = $Insumo->getRow("SELECT * FROM parqueadero.insumos WHERE id =?", array($id));
+                $Insumo->Disconnect();
+                return ($getrow) ? new Insumos($getrow) : null;
+            }else{
+                throw new Exception('Id de insumo Invalido');
             }
-            return null;
+        } catch (Exception $e) {
+            GeneralFunctions::logFile('Exception',$e, 'error');
+        }
+        return null;
+    }
+
+    /**
+     * @return array
+     * @throws Exception
+     */
+    public static function getAll() : ?array
+    {
+        return Insumos::search("SELECT * FROM parqueadero.insumos");
+    }
+
+    /**
+     * @param $nombre
+     * @return bool
+     * @throws Exception
+     */
+    public static function insumoRegistrada($nombre): bool
+    {
+        $nombre = trim(strtolower($nombre));
+        $result = Insumos::search("SELECT id FROM parqueadero.insumos where nombre = '" . $nombre. "'");
+        if ( !empty($result) && count ($result) > 0 ) {
+            return true;
+        } else {
+            return false;
         }
     }
 
-    static function getAll(): ?array
+    /**
+     * @return string
+     */
+    public function __toString() : string
     {
-        return Insumos::search("SELECT * FROM insumos");
+        return "Nombre: $this->nombre, Descripción: $this->descripcion, Estado: $this->estado";
     }
 
+
+    /**
+     * Specify data which should be serialized to JSON
+     * @link https://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4
+     */
     public function jsonSerialize()
     {
         return [
-            'id' => $this->getId(),
             'nombre' => $this->getNombre(),
-            'cantidad' => $this->getcantidad(),
-            'presentasion' => $this->getpresentasion(),
-            'valor' => $this->getvalor(),
-            'empresa_id' => $this->getempresa_id(),
+            'descripcion' => $this->getDescripcion(),
+            'estado' => $this->getEstado(),
+            'created_at' => $this->getCreatedAt()->toDateTimeString(),
+            'updated_at' => $this->getUpdatedAt()->toDateTimeString(),
         ];
-
     }
 }

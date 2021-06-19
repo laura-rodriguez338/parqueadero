@@ -1,13 +1,13 @@
 <?php
-require_once("../../../app/Controllers/insumosController.php");
+require_once("../../../app/Controllers/ColoressController.php");
 require_once("../../partials/routes.php");
 require_once("../../partials/check_login.php");
 
-use App\Controllers\UsuariosController;
+use App\Controllers\ColoressController;
 use App\Models\GeneralFunctions;
-use App\Models\Usuarios;
+use App\Models\Coloress;
 
-$nameModel = "insumos";
+$nameModel = "Colores";
 $pluralModel = $nameModel.'s';
 $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
 ?>
@@ -40,7 +40,7 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="<?= $baseURL; ?>/views"><?= $_ENV['ALIASE_SITE'] ?></a></li>
+                            <li class="breadcrumb-item"><a href="<?= $baseURL; ?>/views/"><?= $_ENV['ALIASE_SITE'] ?></a></li>
                             <li class="breadcrumb-item active"><?= $pluralModel ?></li>
                         </ol>
                     </div>
@@ -58,13 +58,13 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                         <!-- Default box -->
                         <div class="card card-dark">
                             <div class="card-header">
-                                <h3 class="card-title"><i class="fas fa-user"></i> &nbsp; Gestionar <?= $pluralModel ?></h3>
+                                <h3 class="card-title"><i class="fas fa-boxes"></i> &nbsp; Gestionar <?= $pluralModel ?></h3>
                                 <div class="card-tools">
                                     <button type="button" class="btn btn-tool" data-card-widget="card-refresh"
                                             data-source="index.php" data-source-selector="#card-refresh-content"
                                             data-load-on-init="false"><i class="fas fa-sync-alt"></i></button>
                                     <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
-                                            class="fas fa-expand"></i></button>
+                                                class="fas fa-expand"></i></button>
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse"
                                             data-toggle="tooltip" title="Collapse">
                                         <i class="fas fa-minus"></i></button>
@@ -90,48 +90,46 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                             <tr>
                                                 <th>#</th>
                                                 <th>Nombres</th>
-                                                <th>cantidad</th>
-                                                <th>presentasion</th>
-                                                <th>valor</th>
-                                                <th>empresa_id</th>
-
-
+                                                <th>Descripción</th>
+                                                <th>Estado</th>
+                                                <th>Acciones</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <?php
-                                            $arrinsumos = insumosController::getAll();
-                                            /* @var $arrinsumos insumos[] */
-                                            foreach ($arrinsumos as $insumos) {
+                                            $arrColoress = ColoressController::getAll();
+                                            /* @var $arrColoress Coloress[] */
+                                            foreach ($arrColoress as $colores) {
                                                 ?>
                                                 <tr>
-                                                    <td><?= $insumos->getId(); ?></td>
-                                                    <td><?= $insumos->getNombres(); ?></td>
-                                                    <td><?= $insumos->getcantidad(); ?></td>
-                                                    <td><?= $insumos->getpresentasion(); ?></td>
-                                                    <td><?= $insumos->getvalor(); ?></td>
-                                                    <td><?= $insumos->getempresa_id(); ?></td>
-
-
-                                                        <a href="edit.php?id=<?php echo $insumos->getId(); ?>"
+                                                    <td><?= $colores->getId(); ?></td>
+                                                    <td><?= $colores->getNombre(); ?></td>
+                                                    <td><?= $colores->getDescripcion(); ?></td>
+                                                    <td><?= $colores->getEstado(); ?></td>
+                                                    <td>
+                                                        <a href="edit.php?id=<?= $colores->getId(); ?>"
                                                            type="button" data-toggle="tooltip" title="Actualizar"
                                                            class="btn docs-tooltip btn-primary btn-xs"><i
-                                                                class="fa fa-edit"></i></a>
-                                                        <a href="show.php?id=<?php echo $insumos->getId(); ?>"
+                                                                    class="fa fa-edit"></i></a>
+                                                        <a href="show.php?id=<?= $colores->getId(); ?>"
                                                            type="button" data-toggle="tooltip" title="Ver"
                                                            class="btn docs-tooltip btn-warning btn-xs"><i
-                                                                class="fa fa-eye"></i></a>
-                                                        <?php if ($insumos->getEstado() != "Activo") { ?>
-                                                            <a href="../../../app/Controllers/MainController.php?controller=<?= $pluralModel ?>&action=activate&id=<?= $insumos->getId(); ?>"
+                                                                    class="fa fa-eye"></i></a>
+                                                        <a href="../productos/index.php?idColor=<?= $colores->getId(); ?>"
+                                                           type="button" data-toggle="tooltip" title="Ver Productos"
+                                                           class="btn docs-tooltip btn-success btn-xs"><i
+                                                                    class="fa fa-sitemap"></i></a>
+                                                        <?php if ($colores->getEstado() != "Activo") { ?>
+                                                            <a href="../../../app/Controllers/MainController.php?controller=<?= $pluralModel ?>&action=activate&id=<?= $colores->getId(); ?>"
                                                                type="button" data-toggle="tooltip" title="Activar"
                                                                class="btn docs-tooltip btn-success btn-xs"><i
-                                                                    class="fa fa-check-square"></i></a>
+                                                                        class="fa fa-check-square"></i></a>
                                                         <?php } else { ?>
                                                             <a type="button"
-                                                               href="../../../app/Controllers/MainController.php?controller=<?= $pluralModel ?>&action=inactivate&id=<?= $insumos->getId(); ?>"
+                                                               href="../../../app/Controllers/MainController.php?controller=<?= $pluralModel ?>&action=inactivate&id=<?= $colores->getId(); ?>"
                                                                data-toggle="tooltip" title="Inactivar"
                                                                class="btn docs-tooltip btn-danger btn-xs"><i
-                                                                    class="fa fa-times-circle"></i></a>
+                                                                        class="fa fa-times-circle"></i></a>
                                                         <?php } ?>
                                                     </td>
                                                 </tr>
@@ -142,11 +140,9 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                             <tr>
                                                 <th>#</th>
                                                 <th>Nombres</th>
-                                                <th>cantidad</th>
-                                                <th>presentasion</th>
-                                                <th>valor</th>
-                                                <th>empresa_id</th>
-
+                                                <th>Descripción</th>
+                                                <th>Estado</th>
+                                                <th>Acciones</th>
                                             </tr>
                                             </tfoot>
                                         </table>
@@ -174,7 +170,5 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
 <?php require('../../partials/scripts.php'); ?>
 <!-- Scripts requeridos para las datatables -->
 <?php require('../../partials/datatables_scripts.php'); ?>
-
 </body>
 </html>
-
